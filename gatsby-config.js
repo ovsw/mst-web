@@ -83,25 +83,6 @@ module.exports = {
         overlayDrafts: true
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     typekit: {
-    //       id: 'jubilat;europa',
-    //       api: '//use.edgefonts.net'
-    //     }
-    //   }
-    // },
-    // {
-    //   resolve: 'gatsby-plugin-google-fonts',
-    //   options: {
-    //     fonts: [
-    //       'Jubilat:400,700',
-    //       'Europa:400,400i,700'
-    //     ],
-    //     display: 'swap'
-    //   }
-    // },
     'gatsby-plugin-theme-ui'
   ]
 
