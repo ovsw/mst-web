@@ -7,12 +7,14 @@ import Casette from './Casette'
 
 import './Casettes.css'
 
-const Casettes = () => {
+const Casettes = ({heading}) => {
   return (
     <section className='slidecards'>
-      <div className='slidecards__heading-wrapper'>
-        <h2>Virtual Offerings</h2>
-      </div>
+      {heading && (
+        <div className='slidecards__heading-wrapper'>
+          <Styled.h2>{heading}</Styled.h2>
+        </div>
+      )}
 
       <div className='slidecards__cards-wrapper'>
         {casettesTempContent.map(casette => <Casette key={casette.url} {...casette} />)}

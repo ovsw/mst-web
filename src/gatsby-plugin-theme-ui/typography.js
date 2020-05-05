@@ -55,7 +55,7 @@ const typography = {
     extrabold: '800',
     black: '900',
     body: '400',
-    heading: '800'
+    heading: '400'
   },
   letterSpacings: {
     tighter: '-0.05em',

@@ -20,9 +20,14 @@ const Hero = () => {
       </video>
 
       <div className='hero__content'>
-        <h1 className='hero__heading'>mainstages: LIVE!</h1>
+        <Styled.h1 className='hero__heading' sx={{color: 'primary'}}>mainstages: LIVE!</Styled.h1>
         <p className='hero__hookline'><span>Virtual shows and programs for your community on ZOOM!</span></p>
-        <a className='button hero__cta' href='/virtual/mainstages-live-at-home/'>Join in on the Digital Fun!</a>
+        <a
+          className='hero__cta' href='/virtual/mainstages-live-at-home/' sx={{
+            variant: 'buttons.simpleWhite'
+          }}
+        >Join in on the Digital Fun!
+        </a>
       </div>
       <img className={`hero__left-curtain ${courtainClass}`} src='/images/left-courtain.png' />
       <img className={`hero__right-curtain ${courtainClass}`} src='/images/right-courtain.png' />

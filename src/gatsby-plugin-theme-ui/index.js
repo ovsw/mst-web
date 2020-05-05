@@ -18,7 +18,7 @@ import {skewedRight} from './common'
 const sharedHeadingStyles = {
   fontWeight: 'heading',
   lineHeight: 'heading',
-  fontFamily: 'Sarabun, sans-serif',
+  fontFamily: 'heading',
   m: 0,
   mb: 3,
   color: 'text'

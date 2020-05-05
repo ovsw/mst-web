@@ -407,26 +407,7 @@ h2 {font-size: 2.369rem;}
 h3 {font-size: 1.777rem;}
 h4 {font-size: 1.333rem;}
 small, .font_small {font-size: 0.75em;}
-.button {
-  padding: .5rem .9rem;
-  background-color: blue;
-  border: none;
-  font-size: 1.1rem;
-  color: white;
-  text-align: center;
-  font-family: Jubilat, serif;
-  font-weight: 400;
-  text-decoration: none;
-  display: inline-block;
-}
-.button:hover {
-    background-color: white;
-    color: blue; 
-  }
-.content-anchor {
-  position: relative;
-  top: -100px;
-}
+/* button was here */
 
 
 nav.ul::before {
