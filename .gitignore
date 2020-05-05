@@ -1,3 +1,6 @@
+# manual exclusions
+*old.*
+
 # Logs
 logs
 *.log
