@@ -3,7 +3,7 @@ import React from 'react'
 import StandardText from '../global/standardText'
 // import ContentImage from '../global/contentImage'
 import HeroInnerModule from '../global/heroInnerModule'
-import ImageWTextOverModule from '../global/imageWTextOverModule'
+import ImageWTextModule from '../global/imageWithTextModule'
 
 const Modules = ({reactModule, type}) => {
   switch (type) {
@@ -14,7 +14,7 @@ const Modules = ({reactModule, type}) => {
     case 'heroInnerModule':
       return <HeroInnerModule data={reactModule} />
     case 'imageWTextOverModule':
-      return <ImageWTextOverModule data={reactModule} />
+      return <ImageWTextModule data={reactModule} />
     default:
       return (<span>{type}</span>)
   }

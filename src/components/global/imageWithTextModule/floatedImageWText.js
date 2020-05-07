@@ -3,22 +3,15 @@ import {jsx} from 'theme-ui'
 import React from 'react' // eslint-disable-line
 import BackgroundImage from 'gatsby-background-image'
 
-// import {buildImageObj} from '../../utils/helpers' // cn
-// import {imageUrlFor} from '../../utils/image-url'
 import {getFluidGatsbyImage} from 'gatsby-source-sanity'
-import clientConfig from '../../../client-config'
+import clientConfig from '../../../../client-config'
 
 import BlockContent from '@sanity/block-content-to-react'
+import serializers from '../../../utils/serializers'
 
-import serializers from '../../utils/serializers'
-
-const ImageWTextOverModule = ({data}) => {
-  console.log(data)
-  const {caption, image, text, layout} = data
-
+const FloatedImageWText = ({image, text, layout}) => {
   const r = layout === 'right' ? '-' : ''
   const fluidProps = getFluidGatsbyImage(image.asset.id, {maxWidth: 1200}, clientConfig.sanity)
-
   return (
     <section sx={{
       display: 'grid',
@@ -72,31 +65,4 @@ const ImageWTextOverModule = ({data}) => {
   )
 }
 
-export default ImageWTextOverModule
-
-// const desktopImageUrl = imageUrlFor(buildImageObj(image))
-//   .width(1920)
-// // .height(Math.floor((9 / 16) * 600))
-// // .height(thumbSize.height)
-//   .auto('format')
-//   .url()
-
-// const tabletImageUrl = imageUrlFor(buildImageObj(image))
-//   .width(1200)
-// // .height(Math.floor((11 / 16) * 1200))
-// // .height(thumbSize.height)
-//   .auto('format')
-//   .url()
-
-// const mobileImageUrl = imageUrlFor(buildImageObj(image))
-//   .width(768)
-// // .height(Math.floor((11 / 16) * 1200))
-// // .height(thumbSize.height)
-//   .auto('format')
-//   .url()
-
-// {/* <picture>
-//         <source srcSet={mobileImageUrl} media='(max-width: 768px)' />
-//         <source srcSet={tabletImageUrl} media='(max-width: 1200px)' />
-//         <img src={desktopImageUrl} alt={data.caption} />
-//       </picture> */}
+export default FloatedImageWText
