@@ -5,7 +5,6 @@ import {Link} from 'gatsby'
 import {FaChevronRight} from 'react-icons/fa'
 
 export default ({node}) => {
-  console.log(node)
   return (
     <div sx={{textAlign: 'left', mt: 3}}>
       <Link to={node.url} className='contentButton'>{node.buttonText} <FaChevronRight sx={{position: 'relative', top: '0.25rem'}} /></Link>

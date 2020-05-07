@@ -9,8 +9,10 @@ import serializers from '../../utils/serializers'
 const StandardText = ({data}) => {
   const {text} = data
   return (
-    <section sx={{variant: ['styles', 'sections.rteSection']}}>
-      <Container sx={{maxWidth: '760px'}}>
+    <section
+      sx={{variant: ['styles', 'sections.rteSection']}}
+    >
+      <Container sx={{maxWidth: '760px', py: 5}}>
         <BlockContent blocks={text} serializers={serializers} />
       </Container>
     </section>

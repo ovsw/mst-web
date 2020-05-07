@@ -18,7 +18,7 @@ const FloatedImageWText = ({image, text, layout}) => {
       gridTemplateColumns: '100px 1fr 1fr 1fr 100px',
       gridTemplateRows: ['400px 1fr 1fr 200px', null, '100px 1fr 1fr 100px'],
       bg: 'background',
-      py: 5
+      my: 5
     }}
     >
       <div sx={{

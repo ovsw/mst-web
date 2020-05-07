@@ -13,11 +13,15 @@ export default ({node}) => {
       width: ['full', null, null, null, '120%'],
       ml: ['auto', null, null, null, '-10%'],
       borderRadius: 'lg',
-      padding: 4,
+      padding: 5,
       p: {
-        variant: 'styles.h3',
-        mt: 0,
-        color: 'light'
+        fontSize: [3, 4, 5, 5],
+        fontWeight: 'heading',
+        lineHeight: 'heading',
+        fontFamily: 'heading',
+        my: 0,
+        mb: 4,
+        color: 'white'
       }
     }}
     >
