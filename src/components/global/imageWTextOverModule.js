@@ -25,8 +25,7 @@ const ImageWTextOverModule = ({data}) => {
       gridTemplateColumns: '100px 1fr 1fr 1fr 100px',
       gridTemplateRows: ['400px 1fr 1fr 200px', null, '100px 1fr 1fr 100px'],
       bg: 'background',
-      py: 5,
-      marginBottom: '2000px'
+      py: 5
     }}
     >
       <div sx={{
@@ -39,7 +38,7 @@ const ImageWTextOverModule = ({data}) => {
       }}
       >
         <div sx={{
-          p: [0, 3],
+          p: 3,
           maxWidth: ['100%', null, 'md', 'xl', null, '2xl'],
           bg: 'white',
           marginLeft: layout === 'right' ? 'auto' : '0',
@@ -64,7 +63,7 @@ const ImageWTextOverModule = ({data}) => {
         fluid={fluidProps} sx={{
           backgroundPosition: 'center center',
           gridColumnStart: [`${r}1`, null, null, `${r}3`],
-          gridColumnEnd: `${r}5`,
+          gridColumnEnd: [`${r}6`, null, null, `${r}5`],
           gridRowStart: '1',
           gridRowEnd: ['2', null, '5']
         }}
