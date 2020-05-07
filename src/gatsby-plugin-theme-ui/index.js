@@ -91,18 +91,12 @@ export default {
       },
       '&.contentButton': {
         ...sharedButtonStyles,
+        color: 'light',
         display: 'inline-block',
-        backgroundColor: 'black',
-        color: 'primary',
-        border: 'none',
-        mb: 3,
-        fontWeight: 'bold',
-        borderRadius: 'default',
         ':hover': {
-          bg: 'black',
-          boxShadow: '0 -3px 0 0 rgba(24,24,24,.15) inset, 0 3px 10px rgba(0,0,0,0.3)',
-          transform: 'translateY(-3px) skew(-8deg)',
-          color: 'white'
+          bg: 'primary',
+          transform: 'translateY(-3px)',
+          color: 'secondary'
         }
       }
     },

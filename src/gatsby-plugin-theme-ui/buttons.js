@@ -2,8 +2,6 @@ import {skewedRight} from './common'
 
 export const sharedButtonStyles = {
   padding: '.5rem .9rem',
-  color: 'secondary',
-  backgroundColor: 'primary',
   border: 'none',
   textAlign: 'center',
   fontFamily: 'body',
@@ -12,24 +10,34 @@ export const sharedButtonStyles = {
   display: 'inline-block',
   cursor: 'pointer',
   lineHeight: 'inherit',
+  backgroundColor: 'primaryDark',
+  mb: 3,
+  borderRadius: 'default',
+  boxShadow: '0 -3px 0 0 rgba(24,24,24,.15) inset, 0 3px 10px rgba(0,0,0,0.3)',
   py: '0.7rem',
   px: '1.4rem',
   fontSize: 2,
   transition: 'all 300ms ease',
   ':hover': {
-    transform: 'translateY(-3px)',
-    color: 'secondary'
+    transform: 'translateY(-3px)'
   }
 }
 
 const buttons = {
   buttons: {
     simple: {
-      ...sharedButtonStyles
+      ...sharedButtonStyles,
+      color: 'light'
     },
     simpleAccent: {
       ...sharedButtonStyles,
-      backgroundColor: 'primary'
+      backgroundColor: 'primary',
+      color: 'light!important'
+    },
+    simpleAccentDark: {
+      ...sharedButtonStyles,
+      backgroundColor: 'secondary',
+      color: 'white!important'
     },
     simpleWhite: {
       ...sharedButtonStyles,

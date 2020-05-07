@@ -8,6 +8,7 @@ import Table from './Table'
 import Embed from './Embed'
 import File from './File'
 import CTABlock from './CTABlock'
+import Button from './Button'
 
 import isAbsoluteURL from 'is-absolute-url'
 
@@ -27,6 +28,7 @@ const serializers = {
     // mainImage: Figure,
     imageModule: Figure,
     ctaBlock: CTABlock,
+    button: Button,
     youtube: ({node}) => {
       const {url} = node
       const id = getYouTubeId(url)
