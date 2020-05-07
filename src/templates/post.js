@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import RenderModules from '../utils/renderModules'
 // import {graphql, Link} from 'gatsby'
 
-const Page = ({path, pageContext}) => {
+const Post = ({path, pageContext}) => {
   // console.log(path, pageContext)
 
   const {
@@ -24,4 +24,4 @@ const Page = ({path, pageContext}) => {
   )
 }
 
-export default Page
+export default Post

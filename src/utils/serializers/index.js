@@ -7,6 +7,7 @@ import YouTube from 'react-youtube'
 import Table from './Table'
 import Embed from './Embed'
 import File from './File'
+import CTABlock from './CTABlock'
 
 import isAbsoluteURL from 'is-absolute-url'
 
@@ -23,7 +24,9 @@ const YTopts = {
 const serializers = {
   types: {
     authorReference: ({node}) => <span>{node.author.name}</span>,
-    mainImage: Figure,
+    // mainImage: Figure,
+    imageModule: Figure,
+    ctaBlock: CTABlock,
     youtube: ({node}) => {
       const {url} = node
       const id = getYouTubeId(url)

@@ -32,7 +32,7 @@
 }
  }
 .footer__wrapper {
-    
+    padding-top: 100px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(49%, rgba(255,255,255,1)),color-stop(49%, rgba(135,204,47,1)));
     
     background: -webkit-linear-gradient(top, rgba(255,255,255,1) 49%,rgba(135,204,47,1) 49%);

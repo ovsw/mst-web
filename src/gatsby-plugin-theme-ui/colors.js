@@ -2,9 +2,10 @@ const colors = {
   colors: {
     // layout
     primary: '#87CC2F',
+    primaryDark: '#599e00',
     secondary: '#450d0d',
     accent: '#d93921',
-    background: 'white',
+    background: '#fcfff2',
     light: '#f7fafc',
     dark: '#592203',
     mutedBg: '#f1f1f1',

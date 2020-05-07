@@ -21,7 +21,7 @@ const sharedHeadingStyles = {
   fontFamily: 'heading',
   m: 0,
   mb: 3,
-  color: 'text'
+  color: 'secondary'
 }
 
 export default {
@@ -80,14 +80,14 @@ export default {
       fontSize: '2'
     },
     a: {
-      color: 'primary',
-      fontWeight: 'bold',
+      color: 'primaryDark',
       textDecoration: 'none',
       borderBottom: '2px solid',
-      borderColor: 'primary',
-      pb: '0.1em',
+      borderColor: 'primaryDark',
+      pb: '-0.1em',
       ':hover': {
-        color: 'primary'
+        color: 'primary',
+        borderColor: 'primary'
       },
       '&.contentButton': {
         ...sharedButtonStyles,
@@ -113,19 +113,22 @@ export default {
     },
     h1: {
       ...sharedHeadingStyles,
-      fontSize: [6, 6, 7, 8],
-      mt: 2
+      fontSize: [6, 6, 7, 8]
     },
     h2: {
       ...sharedHeadingStyles,
       fontSize: [4, 5, 6, 6],
-      mt: 5,
       mb: 4
+    },
+    '* + h2, * + h1': {
+      mt: 5
     },
     h3: {
       ...sharedHeadingStyles,
       fontSize: [3, 4, 5, 5],
-      fontWeight: 'bold',
+      fontWeight: '300'
+    },
+    '* + h3': {
       mt: 4
     },
     h4: {
@@ -155,12 +158,41 @@ export default {
       m: '0',
       p: '0'
     },
+    figure: {
+      '&.left': {
+        float: ['none', null, null, null, 'left'],
+        width: ['none', null, null, null, '70%'],
+        marginLeft: ['auto', null, null, null, '-200px'],
+        px: 4,
+        display: 'block',
+        img: {
+          width: 'full'
+        },
+        figcaption: {
+          mb: 2
+        }
+      },
+      '&.right': {
+        float: ['none', null, null, null, 'right'],
+        width: ['none', null, null, null, '70%'],
+        marginRight: ['auto', null, null, null, '-200px'],
+        px: 4,
+        display: 'block',
+        img: {
+          width: 'full'
+        },
+        figcaption: {
+          mb: 2
+        }
+      }
+    },
     figcaption: {
       textAlign: 'center',
       fontSize: 1,
-      mt: 2,
+      mt: 0,
       mb: 4,
       fontStyle: 'italic'
+
     },
     table: {
       width: '100%',

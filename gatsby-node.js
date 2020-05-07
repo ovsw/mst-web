@@ -24,7 +24,14 @@ exports.createPages = async ({graphql, actions, reporter}) => {
           }
         }
       }
-      allSanityPagePerformance{
+      allSanityPagePerformance {
+        edges {
+          node {
+            _rawContent(resolveReferences: {maxDepth: 9})
+          }
+        }
+      }
+      allSanityPost {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
@@ -44,6 +51,8 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   const allGeneralPages = [...pages, ...pagesHidden]
 
   const performancePages = pagesQuery.data.allSanityPagePerformance.edges || []
+
+  const blogPostPages = pagesQuery.data.allSanityPost.edges || []
 
   allGeneralPages.forEach((edge, index) => {
     const path = `/${edge.node._rawContent.main.slug.current === 'home' ? '' : edge.node._rawContent.main.slug.current}/`
@@ -65,6 +74,18 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     createPage({
       path,
       component: require.resolve('./src/templates/pagePerformance.js'),
+      context: {...edge.node._rawContent}
+    })
+  })
+
+  blogPostPages.forEach((edge, index) => {
+    const path = `/blog/${edge.node._rawContent.main.slug.current}/`
+
+    reporter.info(`Creating blog post page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/post.js'),
       context: {...edge.node._rawContent}
     })
   })
