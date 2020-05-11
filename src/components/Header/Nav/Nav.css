@@ -148,20 +148,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: none;
 }
 .top-nav__item-level-3 {
   background-color: #301111;
-  height: 0;
 }
 .top-nav__item-level-3:first-child {
 }
 .top-nav__item-level-3 > a {
   display: block;
 }
-.top-nav__item-level-3:hover {
+/* .top-nav__item-level-3:hover {
   background-color: rgb(95, 150, 23);
-}
+} */
 .top-nav__current,
 .top-nav__active-parent {
   background-color: rgb(95, 150, 23);
@@ -171,23 +169,23 @@
   }
 .top-nav__submenu-button {
   height: 100%;
-  display: none;
   position: absolute;
   top: 0;
+  padding-top: 20px;
   right: 0;
-  width: 50px;
+  width: 60px;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: top;
+  justify-content: center;
 }
 .top-nav__submenu-button:hover {
     color: rgb(159, 216, 85);
   }
 /* icons */
-.top-nav__has-children > .top-nav__submenu-button {
-    
-    display: inline-block;
-  }
+
 .top-nav__has-children > .top-nav__submenu-button .top-nav__ico-plus,
     .top-nav__has-children > .top-nav__submenu-button .top-nav__ico-minus {
       position: absolute;
@@ -205,19 +203,17 @@
 .top-nav__has-children.submenu-open > .top-nav__submenu-button {
         background-color: rgb(65, 37, 37);
     }
-.top-nav__has-children.submenu-open > .top-nav__submenu-button .top-nav__ico-plus {display: none;}
 .top-nav__has-children.submenu-open > .top-nav__submenu-button .top-nav__ico-minus {display: inline-block;}
-.top-nav__has-children.submenu-open .top-nav__item-level-3 {
+.top-nav__item-level-3 {
       height: auto;
       border-top: 1px dotted rgba(255, 255, 255, 0.2);
       background-color: rgb(65, 37, 37);
-      
     }
-.top-nav__has-children.submenu-open .top-nav__item-level-3 a {
+.top-nav__item-level-3 a {
         padding: 0.7rem  1rem ;
         font-size: 1rem;
       }
-.top-nav__has-children.submenu-open .top-nav__item-level-3 a:hover {
+.top-nav__item-level-3 a:hover {
           color: rgb(108, 162, 37);
         }
 .top-nav__has-children.submenu-open .top-nav__item-level-3.top-nav__current {
@@ -256,24 +252,39 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
     font-family: Jubilat, serif;
-    background-image: url('http://placebear.com/300/200');
+    /* background-image: url('http://placebear.com/300/200'); */
     background-size: cover;
     position: relative;
     border-bottom: 3px solid rgb(48, 17, 17);
     border-right: 3px solid rgb(48, 17, 17);
   }
+.top-nav__image-buttons-wrapper a.sectionSwitch_btn--virtual {
+  background: #00f260; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom left, #00f260, #0575e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to  bottom left, #00f260, #0575e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.sectionSwitch_btn--performances {
+  background: #3ca55c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3ca55c, #b5ac49); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3ca55c, #b5ac49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.sectionSwitch_btn--programming {
+  background: #59c173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom left, #59c173, #a17fe0, #5d26c1); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom left, #59c173, #a17fe0, #5d26c1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .top-nav__image-buttons-wrapper a::after {
-      content: '';
+      /* content: ''; */
       display: block;
       position: absolute;
       left: 0;
@@ -294,7 +305,7 @@
       display: block;
       padding: 0.1rem 0.8rem;
       text-align: center;
-      background-color: rgb(94, 141, 32);
+      /* background-color: rgb(94, 141, 32); */
       
       z-index: 2;
     }
