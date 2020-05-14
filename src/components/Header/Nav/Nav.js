@@ -9,7 +9,7 @@ import './Nav.css'
 import {useSiteMenusStructure} from '../../../hooks/use-site-menus-structure'
 import {appContext} from '../../../context'
 
-const Nav = ({isMobileNavOpen}) => {
+const Nav = ({isMobileNavOpen, closeMobileNav}) => {
   const menuStructure = useSiteMenusStructure()
   const {activeSisteSection} = useContext(appContext)
 
@@ -37,8 +37,8 @@ const Nav = ({isMobileNavOpen}) => {
           <ul className='top-nav__outer-list' id='menu-main-menu'>
             {menuToShow.items.map(({title, link: {content: {main: {slug}}}, subItems = []}) => (
               <li key={slug.current} className={`top-nav__item-level-1 menu-item ${subItems.length > 0 ? 'top-nav__has-children' : ''}`}>
-                <Link to={slug.current}>{title}</Link>
-                {(subItems.length > 0) && <SubMenu subItems={subItems} />}
+                <Link to={slug.current} onClick={() => closeMobileNav()}>{title}</Link>
+                {(subItems.length > 0) && <SubMenu subItems={subItems} closeMobileNav={closeMobileNav} />}
               </li>
             ))}
           </ul>

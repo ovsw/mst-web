@@ -26,7 +26,7 @@ const Header = () => {
       <div id='overlay' />
       <div className='header__wrapper'>
         <a href='/' className='header__logo'><img src='/images/mainstages-logo-horizontal.png' alt='Mainstages Logo' width='260' /></a>
-        <Nav isMobileNavOpen={isMobileNavOpen} />
+        <Nav isMobileNavOpen={isMobileNavOpen} closeMobileNav={closeMobileNav} />
         <a className='header__menu-trigger' onClick={toggleNav}>
           <span className='label'>Menu</span>
           <div className='header__menu-icon'>

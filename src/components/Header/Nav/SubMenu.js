@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 
 import {FaPlus} from 'react-icons/fa'
 
-const SubMenu = ({subItems}) => {
+const SubMenu = ({subItems, closeMobileNav}) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
   const toggleMenu = (e) => {
     e.preventDefault()
@@ -18,7 +18,7 @@ const SubMenu = ({subItems}) => {
         <ul className='top-nav__inner-list visible'>
           {subItems.map(({title, link: {content: {main: {slug}}}}) => (
             <li key={slug.current} className='top-nav__item-level-3 menu-item'>
-              <Link to={slug.current}>{title}</Link>
+              <Link to={slug.current} onClick={() => closeMobileNav()}>{title}</Link>
             </li>
           ))}
         </ul>}
