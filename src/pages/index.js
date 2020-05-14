@@ -5,8 +5,6 @@ import {graphql, Link} from 'gatsby'
 // import {mapEdgesToNodes, localizeText} from '../lib/helpers'
 import Img from 'gatsby-image'
 
-import Hero from '../components/modules/Hero'
-import Casettes from '../components/modules/Casettes'
 import Testimonials from '../components/modules/TestimonialsSlideshow'
 import LargeImageWText from '../components/modules/LargeImageWText'
 
@@ -16,8 +14,6 @@ export default () => {
 
   return (
     <>
-      <Hero />
-      <Casettes heading='Virtual Offerings' />
       <Testimonials />
       <LargeImageWText />
 

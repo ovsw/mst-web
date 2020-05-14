@@ -39,6 +39,15 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'open sans :300,400,400i,700' // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     // {
     //   resolve: 'gatsby-plugin-manifest',
     //   options: {

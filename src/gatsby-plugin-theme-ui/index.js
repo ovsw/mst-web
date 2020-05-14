@@ -120,14 +120,15 @@ export default {
     h3: {
       ...sharedHeadingStyles,
       fontSize: [3, 4, 5, 5],
-      fontWeight: '300'
+      fontWeight: '300',
+      m: 0
     },
     '* + h3': {
       mt: 4
     },
     h4: {
       ...sharedHeadingStyles,
-      fontSize: [2, 3, 4]
+      fontSize: [3, 3, 4]
     },
     h5: {
       ...sharedHeadingStyles,

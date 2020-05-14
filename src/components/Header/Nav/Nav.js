@@ -12,8 +12,6 @@ import {appContext} from '../../../context'
 const Nav = ({isMobileNavOpen}) => {
   const menuStructure = useSiteMenusStructure()
   const {activeSisteSection} = useContext(appContext)
-  console.log(menuStructure)
-  console.log('activeSiteSection: ', activeSisteSection)
 
   let menuToShow = null
 
@@ -30,8 +28,6 @@ const Nav = ({isMobileNavOpen}) => {
     default:
     // code
   }
-
-  console.log('menuToShow:', menuToShow)
 
   return (
     <nav className={`top-nav__header-menu ${isMobileNavOpen ? 'visible' : ''}`}>

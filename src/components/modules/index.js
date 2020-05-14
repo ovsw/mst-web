@@ -2,7 +2,9 @@ import React from 'react'
 
 import StandardText from '../global/standardText'
 // import ContentImage from '../global/contentImage'
+import VideoHero from '../global/videoHero'
 import HeroInnerModule from '../global/heroInnerModule'
+import Casettes from '../global/casettes'
 import ImageWTextModule from '../global/imageWithTextModule'
 
 const Modules = ({reactModule, type}) => {
@@ -11,6 +13,10 @@ const Modules = ({reactModule, type}) => {
       return <StandardText data={reactModule} />
     // case 'imageModule':
     //   return <ContentImage data={reactModule} />
+    case 'videoHero':
+      return <VideoHero data={reactModule} />
+    case 'casettes':
+      return <Casettes data={reactModule} />
     case 'heroInnerModule':
       return <HeroInnerModule data={reactModule} />
     case 'imageWTextOverModule':

@@ -10,8 +10,6 @@ import BlockContent from '@sanity/block-content-to-react'
 import serializers from '../../../utils/serializers'
 
 const BlockImageWText = ({image, text, layout}) => {
-  console.log(layout)
-  const r = layout === 'right' ? '-' : ''
   const fluidProps = getFluidGatsbyImage(image.asset.id, {maxWidth: 1200}, clientConfig.sanity)
   return (
     <section>

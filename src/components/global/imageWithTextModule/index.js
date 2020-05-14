@@ -10,7 +10,6 @@ import BlockImageWText from './blockImageWText'
 
 const ImageWTextOverModule = ({data}) => {
   const {theme} = data
-  console.log(theme)
   return (
     <>
       {theme === 'overlapping' && <FloatedImageWText {...data} />}
