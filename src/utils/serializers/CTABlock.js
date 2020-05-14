@@ -5,7 +5,6 @@ import {Link} from 'gatsby'
 import {FaChevronRight} from 'react-icons/fa'
 
 export default ({node}) => {
-  console.log(node)
   return (
     <div sx={{
       bg: 'secondary',
