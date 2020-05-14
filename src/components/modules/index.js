@@ -5,6 +5,7 @@ import StandardText from '../global/standardText'
 import VideoHero from '../global/videoHero'
 import HeroInnerModule from '../global/heroInnerModule'
 import Casettes from '../global/casettes'
+import Testimonials from '../global/testimonialsSlideshow'
 import ImageWTextModule from '../global/imageWithTextModule'
 
 const Modules = ({reactModule, type}) => {
@@ -17,6 +18,8 @@ const Modules = ({reactModule, type}) => {
       return <VideoHero data={reactModule} />
     case 'casettes':
       return <Casettes data={reactModule} />
+    case 'testimonials':
+      return <Testimonials data={reactModule} />
     case 'heroInnerModule':
       return <HeroInnerModule data={reactModule} />
     case 'imageWTextOverModule':

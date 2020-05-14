@@ -9,7 +9,6 @@ import './videoHero.css'
 
 const VideoHero = ({data}) => {
   const {buttonText, caption, image, text, title, url, video} = data
-  console.log(buttonText)
   const [courtainClass, setCourtainClass] = useState('')
   useEffect(() => {
     setCourtainClass('open')

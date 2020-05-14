@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import {jsx, Container, Styled} from 'theme-ui'
 import React, {useContext} from 'react' // eslint-disable-line
-import {Link} from 'gatsby'
 
 import TestimonialSlide from './TestimonialSlide'
 import Slider from 'react-slick'
@@ -11,7 +10,8 @@ import 'slick-carousel/slick/slick-theme.css'
 
 import './TestimonialSlider.css'
 
-const TestimonialsSlideshow = () => {
+const TestimonialsSlideshow = ({data}) => {
+  const {testimonials} = data
   const slickSettings = {
     dots: true,
     infinite: true,
@@ -40,7 +40,7 @@ const TestimonialsSlideshow = () => {
   return (
     <section className='testimonial-slider'>
       <Slider {...slickSettings}>
-        {testimonialsTempContent.map(slide => <TestimonialSlide key={slide.author} {...slide} />)}
+        {testimonials.map(({_id, content, name, role}) => <TestimonialSlide key={_id} content={content} name={name} role={role} />)}
       </Slider>
     </section>
 

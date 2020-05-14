@@ -5,7 +5,6 @@ import {graphql, Link} from 'gatsby'
 // import {mapEdgesToNodes, localizeText} from '../lib/helpers'
 import Img from 'gatsby-image'
 
-import Testimonials from '../components/modules/TestimonialsSlideshow'
 import LargeImageWText from '../components/modules/LargeImageWText'
 
 export default () => {
@@ -14,7 +13,6 @@ export default () => {
 
   return (
     <>
-      <Testimonials />
       <LargeImageWText />
 
     </>

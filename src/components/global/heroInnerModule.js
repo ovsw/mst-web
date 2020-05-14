@@ -8,8 +8,6 @@ import {imageUrlFor} from '../../utils/image-url'
 import './heroInnerModule.css'
 
 const HeroInnerModule = ({data}) => {
-  console.log(data)
-
   const desktopImageUrl = imageUrlFor(buildImageObj(data.image))
     .width(1920)
     // .height(Math.floor((9 / 16) * 600))
