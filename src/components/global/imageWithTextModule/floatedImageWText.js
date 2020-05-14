@@ -14,11 +14,10 @@ const FloatedImageWText = ({image, text, layout}) => {
   const fluidProps = getFluidGatsbyImage(image.asset.id, {maxWidth: 1200}, clientConfig.sanity)
   return (
     <section sx={{
+      variant: 'sections.hpSection',
       display: 'grid',
       gridTemplateColumns: '100px 1fr 1fr 1fr 100px',
-      gridTemplateRows: ['400px 1fr 1fr 200px', null, '100px 1fr 1fr 100px'],
-      bg: 'background',
-      my: 5
+      gridTemplateRows: ['400px 1fr 1fr 200px', null, '100px 1fr 1fr 100px']
     }}
     >
       <div sx={{
