@@ -11,11 +11,13 @@ import serializers from '../../../utils/serializers'
 
 const BlockImageWText = ({image, text, layout}) => {
   const fluidProps = getFluidGatsbyImage(image.asset.id, {maxWidth: 1200}, clientConfig.sanity)
+
   return (
     <section>
       <Container>
         <div sx={{
           display: 'flex',
+          flexDirection: layout === 'right' ? 'row-reverse' : 'row',
           my: 5
         }}
         >

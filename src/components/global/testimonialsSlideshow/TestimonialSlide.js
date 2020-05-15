@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, Container, Styled} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import React, {useContext} from 'react' // eslint-disable-line
 import BlockContent from '@sanity/block-content-to-react'
 // import {Link} from 'gatsby'
