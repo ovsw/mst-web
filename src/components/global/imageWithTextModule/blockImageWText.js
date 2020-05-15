@@ -13,22 +13,26 @@ const BlockImageWText = ({image, text, layout}) => {
   const fluidProps = getFluidGatsbyImage(image.asset.id, {maxWidth: 1200}, clientConfig.sanity)
 
   return (
-    <section>
+    <section sx={{
+      variant: 'sections.hpSection'
+    }}
+    >
       <Container>
         <div sx={{
           display: 'flex',
-          flexDirection: layout === 'right' ? 'row-reverse' : 'row',
-          my: 5
+          flexDirection: layout === 'right' ? 'row-reverse' : 'row'
         }}
         >
-          <div sx={{
-            variant: 'styles',
-            width: ['full', null, null, null, '50%'],
-            bg: 'primary',
-            p: 5
-          }}
+          <div
+            sx={{
+              variant: 'styles',
+              width: ['full', null, null, null, '50%'],
+              bg: 'primary',
+              px: 5,
+              py: 6
+            }}
           >
-            <BlockContent blocks={text} serializers={serializers} />
+            <BlockContent blocks={text} serializers={serializers} className='darkBg' />
           </div>
 
           <BackgroundImage

@@ -88,16 +88,27 @@ export default {
       ':hover': {
         color: 'primary',
         borderColor: 'primary'
-      },
-      '&.contentButton': {
-        ...sharedButtonStyles,
-        color: 'light',
-        display: 'inline-block',
-        ':hover': {
-          bg: 'primary',
-          transform: 'translateY(-3px)',
-          color: 'secondary'
-        }
+      }
+    },
+    '.contentButton': {
+      ...sharedButtonStyles,
+      color: 'light',
+      display: 'inline-block',
+      ':hover': {
+        bg: 'primary',
+        transform: 'translateY(-3px)',
+        color: 'secondary'
+      }
+    },
+    '.darkBg .contentButton': {
+      ...sharedButtonStyles,
+      color: 'secondary',
+      bg: 'white',
+      display: 'inline-block',
+      ':hover': {
+        bg: 'secondary',
+        transform: 'translateY(-3px)',
+        color: 'white'
       }
     },
     p: {

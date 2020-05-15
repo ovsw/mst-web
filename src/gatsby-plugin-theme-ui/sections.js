@@ -1,11 +1,11 @@
 const sections = {
   sections: {
     hpSection: {
-      py: [5, null, null, 5],
+      my: [4, null, null, 6],
       bg: 'background'
     },
     hpSectionWhite: {
-      py: [5, null, null, 5],
+      py: [4, null, null, 6],
       bg: 'white'
     },
     rteSection: {
