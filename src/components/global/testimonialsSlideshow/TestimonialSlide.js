@@ -7,10 +7,10 @@ import BlockContent from '@sanity/block-content-to-react'
 const TestimonialSlide = ({content, name, role}) => {
   return (
     <div className='testimonial-slider__content'>
-      <p className='testimonial-slider__text'><span>“ </span>
+      <div className='testimonial-slider__text'><span>“ </span>
         <BlockContent blocks={content} />
         <span className='endquote'>”</span>
-      </p>
+      </div>
       <p className='testimonial-slider__author'>- {name} , <span className='testimonial-slider__company'>{role}</span></p>
     </div>
   )

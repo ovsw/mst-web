@@ -35,7 +35,7 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, i}) 
       {subtitle && <h4 className='slidecards__card-subtitle'>{subtitle}</h4>}
       <Styled.p sx={{fontSize: 1}} className='slidecards__card-description'>{shortDescription}</Styled.p>
       <Link
-        href={buttonUrl} sx={{
+        to={buttonUrl} sx={{
           variant: 'buttons.simpleAccentDark',
           // boxShadow: `-3px 3px 0 ${colorStyles[i]}`,
           color: 'white',
