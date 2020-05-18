@@ -8,6 +8,7 @@ import Casettes from '../global/casettes'
 import Testimonials from '../global/testimonialsSlideshow'
 import ImageWTextModule from '../global/imageWithTextModule'
 import SectionWithItems from '../global/sectionWithItems'
+import PricingTable from '../global/pricingTable'
 
 const Modules = ({reactModule, type}) => {
   switch (type) {
@@ -27,6 +28,8 @@ const Modules = ({reactModule, type}) => {
       return <ImageWTextModule data={reactModule} />
     case 'sectionWithItems':
       return <SectionWithItems data={reactModule} />
+    case 'pricingTableRef':
+      return <PricingTable data={reactModule} />
     default:
       return (<span>{type}</span>)
   }
