@@ -101,13 +101,10 @@ export default {
       }
     },
     '.darkBg .contentButton': {
-      ...sharedButtonStyles,
       color: 'secondary',
       bg: 'white',
-      display: 'inline-block',
       ':hover': {
         bg: 'secondary',
-        transform: 'translateY(-3px)',
         color: 'white'
       }
     },
