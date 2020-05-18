@@ -18,6 +18,7 @@ const TestimonialsSlideshow = ({data}) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: 1,
     customPaging: i => (
       <div
         sx={{
