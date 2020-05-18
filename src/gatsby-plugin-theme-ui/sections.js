@@ -4,8 +4,7 @@ const sections = {
       my: [4, null, null, 6],
       bg: 'background'
     },
-    hpSectionWhite: {
-      py: [4, null, null, 6],
+    'hpSection--white': {
       bg: 'white'
     },
     rteSection: {
