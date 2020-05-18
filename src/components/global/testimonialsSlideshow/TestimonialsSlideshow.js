@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {jsx, Container, Styled} from 'theme-ui'
-import React, {useContext} from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
+import React from 'react' // eslint-disable-line
 
 import TestimonialSlide from './TestimonialSlide'
 import Slider from 'react-slick'
@@ -49,26 +49,3 @@ const TestimonialsSlideshow = ({data}) => {
 }
 
 export default TestimonialsSlideshow
-
-const testimonialsTempContent = [
-  {
-    text: 'My child is so excited. I think this experience already has made her more confident. We are so grateful to you all for having this program, it really makes a huge impact on the kids!',
-    author: 'Nina Livingston',
-    role: 'Parent'
-  },
-  {
-    text: 'My child is so excited. I think this experience already has made her more confident. We are so grateful to you all for having this program, it really makes a huge impact on the kids!',
-    author: 'Nina Livingston',
-    role: 'Parent'
-  },
-  {
-    text: 'My child is so excited. I think this experience already has made her more confident. We are so grateful to you all for having this program, it really makes a huge impact on the kids!',
-    author: 'Nina Livingston',
-    role: 'Parent'
-  },
-  {
-    text: 'My child is so excited. I think this experience already has made her more confident. We are so grateful to you all for having this program, it really makes a huge impact on the kids!',
-    author: 'Nina Livingston',
-    role: 'Parent'
-  }
-]
