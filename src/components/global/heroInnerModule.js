@@ -41,7 +41,7 @@ const HeroInnerModule = ({data}) => {
 
       <div className='basic-page__hero-overlay' />
       <div className='basic-page__hero-content'>
-        <h1 className='basic-page__hero-title'>About Us</h1>
+        <h1 className='basic-page__hero-title'>{data.title}</h1>
       </div>
     </section>
   )
