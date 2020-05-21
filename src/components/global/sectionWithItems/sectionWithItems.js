@@ -5,7 +5,7 @@ import React, {useContext} from 'react' // eslint-disable-line
 import SectionItem from './sectionItem'
 
 const SectionWithItems = ({data}) => {
-  console.log(data)
+  // console.log(data)
   return (
     <section sx={{
       variant: ['sections.hpSection', 'hpSection--white']
