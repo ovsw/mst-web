@@ -46,7 +46,9 @@ const styles = {
     flex: '1 1 30%',
     width: ['block', null, null, '30%'],
     mb: 4,
-    p: [0, null, null, 3],
+    pb: [0, null, null, 3],
+    pr: [0, null, null, 3],
+    pl: [0, null, null, 3],
     img: {
       mt: 0,
       display: 'inline-block',

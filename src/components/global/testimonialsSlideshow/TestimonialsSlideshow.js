@@ -38,8 +38,14 @@ const TestimonialsSlideshow = ({data}) => {
       />
     )
   }
+
   return (
-    <section className='testimonial-slider' sx={{variant: 'sections.hpSection', bg: '#fbfde8'}}>
+    <section
+      className='testimonial-slider' sx={{
+        // variant: 'sections.hpSection',
+        bg: '#fbfde8'
+      }}
+    >
       <Slider {...slickSettings}>
         {testimonials.map(({_id, content, name, role}) => <TestimonialSlide key={_id} content={content} name={name} role={role} />)}
       </Slider>
