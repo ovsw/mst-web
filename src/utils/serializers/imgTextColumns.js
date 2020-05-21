@@ -5,11 +5,14 @@ import React from 'react' // eslint-disable-line
 // import {getFluidGatsbyImage} from 'gatsby-source-sanity'
 // import clientConfig from '../../../client-config'
 
+import BlockContent from '@sanity/block-content-to-react'
+import serializers from './index'
+
 import {buildImageObj} from '../helpers' // cn
 import {imageUrlFor} from '../image-url'
 
 export default ({node}) => {
-  // console.log('node:', node)
+  console.log('node:', node)
   const thumbSize = {width: 200, height: 200}
   const imageUrl = imageUrlFor(buildImageObj(node.image))
     .width(thumbSize.width)
@@ -26,10 +29,8 @@ export default ({node}) => {
         <img className='side-image rounded-image' src={imageUrl} alt={node.alt} width='200' />
       </div>
       <div className='text'>
-        <h3>Pre-K Movement, Puppets, and Imaginative Play</h3>
-        <p><strong><em>Wednesdays @ 11 AM EST</em></strong></p>
-
-        <p>Perfect for the preschooler who needs to get some energy out, this interactive session includes puppets, interactive storytelling, movement, and creative play guaranteed to keep your child entertained.</p>
+        <h3>{node.title}</h3>
+        <BlockContent blocks={node.text} serializers={serializers} />
       </div>
     </div>
 
