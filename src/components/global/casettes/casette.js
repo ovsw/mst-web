@@ -27,15 +27,18 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, imag
         borderTop: '3px solid #87CC2F',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start'
+        justifyContent: 'flex-start'
+        // alignItems: 'stretch'
       }}
     >
       {/* ^^ this was used for bg image */}
       {/* <div className={`slidecards__card-wrapper n-${i}`}> */}
-      {(imageUrl !== '') && <img src={imageUrl} alt={alt || title} sx={{maxWidth: '100%'}} />}
+      {(imageUrl !== '') && <img src={imageUrl} alt={alt || title} sx={{maxWidth: '100%', display: 'block'}} />}
       <div sx={{
-        p: 3
+        flex: '1',
+        p: 3,
+        display: 'flex',
+        flexDirection: 'column'
       }}
       >
         <Styled.h4
@@ -47,10 +50,11 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, imag
         >{title}
         </Styled.h4>
         {subtitle && <h4 className='slidecards__card-subtitle'>{subtitle}</h4>}
-        <Styled.p sx={{fontSize: 1}} className='slidecards__card-description'>{shortDescription}</Styled.p>
+        <Styled.p sx={{fontSize: 1, mb: 4, mt: 0}} className='slidecards__card-description'>{shortDescription}</Styled.p>
         <Link
           to={buttonUrl} sx={{
             variant: 'buttons.simpleAccentDark',
+            marginTop: 'auto',
             // boxShadow: `-3px 3px 0 ${colorStyles[i]}`,
             color: 'white',
             textDecoration: 'none',
