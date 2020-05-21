@@ -10,7 +10,8 @@ import './heroInnerModule.css'
 const HeroInnerModule = ({data}) => {
   const desktopImageUrl = imageUrlFor(buildImageObj(data.image))
     .width(1920)
-    // .height(Math.floor((9 / 16) * 600))
+    // .height(Math.floor((9 / 16) * 1920))
+    .height(580)
     // .height(thumbSize.height)
     .auto('format')
     .url()
@@ -19,13 +20,14 @@ const HeroInnerModule = ({data}) => {
     .width(1200)
     // .height(Math.floor((11 / 16) * 1200))
     // .height(thumbSize.height)
+    .height(400)
     .auto('format')
     .url()
 
   const mobileImageUrl = imageUrlFor(buildImageObj(data.image))
     .width(768)
     // .height(Math.floor((11 / 16) * 1200))
-    // .height(thumbSize.height)
+    .height(300)
     .auto('format')
     .url()
 
