@@ -614,50 +614,8 @@ nav.ul::after {
       width: 30%
   }
  }
-.body-rte__text-w-side-image {
-   
-    margin-bottom: 2rem;
+/* text-w-side-image was here */
 
- 
-  }
-@media (min-width: 768px) {
-.body-rte__text-w-side-image {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex
-
- 
-  }
- }
-@media (min-width: 768px) {
-.body-rte__side-image-wrapper {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 30%;
-              flex: 1 1 30%;
-      width: 30%
-  }
- }
-.body-rte__side-image {
-    /* margin: 0 2rem 4rem 2rem!important; */
-    border-width: 3px !important;
-    display: block!important;
-    width: 150px!important;
-    max-width: none;
-  }
-.body-rte__rounded-image {
-    border-radius: 50%!important;
-  }
-.body-rte__side-text {
-    padding-top: 1rem;
-  }
-@media (min-width: 768px) {
-.body-rte__side-text {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 70%;
-              flex: 1 1 70%;
-      width: 70%
-  }
- }
 .body-rte p a, .body-rte li a {
       text-shadow: .03em 0 #fbfde8, -.03em 0 #fbfde8, 0 .03em #fbfde8, 0 -.03em #fbfde8, .06em 0 #fbfde8, -.06em 0 #fbfde8, .09em 0 #fbfde8, -.09em 0 #fbfde8, .12em 0 #fbfde8, -.12em 0 #fbfde8, .15em 0 #fbfde8, -.15em 0 #fbfde8;
       color: rgb(92, 163, 0);

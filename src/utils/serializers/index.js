@@ -10,6 +10,7 @@ import File from './File'
 import CTABlock from './CTABlock'
 import Button from './Button'
 import CommonText from './CommonText'
+import ImgTextColumns from './imgTextColumns'
 
 import isAbsoluteURL from 'is-absolute-url'
 
@@ -39,7 +40,8 @@ const serializers = {
     mytable: Table,
     iframeEmbed: Embed,
     commonText: CommonText,
-    commonTextRef: CommonText
+    commonTextRef: CommonText,
+    imgTextColumns: ImgTextColumns
   },
   marks: {
     link: ({mark, children}) => {
