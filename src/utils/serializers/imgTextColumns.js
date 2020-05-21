@@ -12,7 +12,6 @@ import {buildImageObj} from '../helpers' // cn
 import {imageUrlFor} from '../image-url'
 
 export default ({node}) => {
-  console.log('node:', node)
   const thumbSize = {width: 200, height: 200}
   const imageUrl = imageUrlFor(buildImageObj(node.image))
     .width(thumbSize.width)
