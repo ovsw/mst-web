@@ -37,7 +37,7 @@ export default ({node}) => {
 }
 
 const styles = {
-  mx: '-8rem',
+  mx: [0, null, null, '-8rem'],
   my: 5,
   display: ['block', null, null, 'flex'],
   '.imageWrapper': {
