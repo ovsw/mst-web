@@ -67,7 +67,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   })
 
   performancePages.forEach((edge, index) => {
-    const path = `/performances/list/${edge.node._rawContent.main.slug.current}/`
+    const path = `/performances/${edge.node._rawContent.main.slug.current}/`
 
     reporter.info(`Creating performance page: ${path}`)
 
