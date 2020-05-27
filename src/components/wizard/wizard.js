@@ -12,7 +12,7 @@ class Wizard extends React.Component {
 
     this.state = {
       // performances: props.performances,
-      // userInputContainerClicked: false,
+      userInputContainerClicked: false,
       // searchTerm: '',
       // fiters representation in state
       // each filter name corresponds with a performance attribute from performances
@@ -229,8 +229,9 @@ class Wizard extends React.Component {
   // **************** UNIVERSAL Filter ****************
   allFilterClickListener (e, filterProp) {
     const name = e.target.dataset.name
-    console.log('FILTER clicked', name)
+    // console.log('FILTER clicked', name)
     this.setState(prevState => ({
+      userInputContainerClicked: true,
       passingTags: {
         ...prevState.passingTags,
         [filterProp]: {
@@ -265,7 +266,7 @@ class Wizard extends React.Component {
         }
       }
     })
-    console.log('collected active filters:', collectedTrueKeys)
+    // console.log('collected active filters:', collectedTrueKeys)
     return collectedTrueKeys
   }
 
@@ -311,25 +312,36 @@ class Wizard extends React.Component {
 
   componentDidUpdate (prevProps) {
     // Typical usage (don't forget to compare props):
-    console.log('collected active filters:', this.filteredCollected())
+    // console.log('collected active filters:', this.filteredCollected())
   }
 
   render () {
     // console.log(this.state.performances)
     const {performances} = this.props
-    const {passingTags} = this.state
-    return (
-      <section sx={{variant: 'sections.default'}}>
-        <Container>
-          <Controls passingTags={passingTags} allFilterClickListener={this.allFilterClickListener} />
-          {/* {this.state.passingTags.performanceType.interactive.isActive && <p>Interactive active</p>} */}
-          {/* {this.state.passingTags.performanceType.game.isActive && <p>Game active</p>} */}
+    const {passingTags, userInputContainerClicked} = this.state
 
-          {performances.length ? (
-            <PerformancesContainer performances={this.filterPerformances()} />
-          ) : null}
-        </Container>
-      </section>
+    const doWeHaveResults = this.filterPerformances().length > 0
+    const total = performances.length
+
+    return (
+      <Container>
+
+        <Controls passingTags={passingTags} allFilterClickListener={this.allFilterClickListener} />
+
+        <>{console.log(doWeHaveResults)}
+          {(doWeHaveResults === true) && (
+            <h2>Currently showing {' '}
+              {userInputContainerClicked ? this.filterPerformances().length : total} {' '}
+              out of {total} performances:
+            </h2>
+          )}
+          {!doWeHaveResults && (
+            <h2>No results match your selection. Please select fewer tags.</h2>
+          )}
+          <PerformancesContainer performances={this.filterPerformances()} />
+        </>
+
+      </Container>
     )
   }
 }

@@ -38,6 +38,13 @@ exports.createPages = async ({graphql, actions, reporter}) => {
           }
         }
       }
+      allSanityPageWizard {
+        edges {
+          node {
+            _rawContent(resolveReferences: {maxDepth: 9})
+          }
+        }
+      }
     }
   `)
 
@@ -53,6 +60,8 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   const performancePages = pagesQuery.data.allSanityPagePerformance.edges || []
 
   const blogPostPages = pagesQuery.data.allSanityPost.edges || []
+
+  const wizardPages = pagesQuery.data.allSanityPageWizard.edges || []
 
   allGeneralPages.forEach((edge, index) => {
     const path = `/${edge.node._rawContent.main.slug.current === 'home' ? '' : edge.node._rawContent.main.slug.current}/`
@@ -86,6 +95,18 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     createPage({
       path,
       component: require.resolve('./src/templates/post.js'),
+      context: {...edge.node._rawContent}
+    })
+  })
+
+  wizardPages.forEach((edge, index) => {
+    const path = `/${edge.node._rawContent.main.slug.current}/`
+
+    reporter.info(`Creating wizard page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/wizard.js'),
       context: {...edge.node._rawContent}
     })
   })

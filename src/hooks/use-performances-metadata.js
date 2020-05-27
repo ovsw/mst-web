@@ -22,6 +22,11 @@ export const usePerformancesMetaData = () => {
                 noOfParticipants
                 performanceType
                 themes
+                image {
+                  asset {
+                    _id
+                  }
+                }
               }
             }
             _id
@@ -47,7 +52,8 @@ export const usePerformancesMetaData = () => {
             hollidays,
             noOfParticipants,
             performanceType,
-            themes
+            themes,
+            image
           }
         }
       }
@@ -59,9 +65,10 @@ export const usePerformancesMetaData = () => {
         holidays: hollidays,
         noOfParticipants: noOfParticipants,
         performanceType: performanceType,
-        themes: themes
+        themes: themes,
+        image: image
       }
-      // console.log(formattedPerformance)
+      console.log(formattedPerformance)
       return formattedPerformance
     }
   )

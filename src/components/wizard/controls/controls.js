@@ -28,10 +28,10 @@ const Controls = ({passingTags, allFilterClickListener}) => {
   return (
     <div sx={controlsStyles}>
       {buildTagControls('Performance Type', 'performanceType')}
-      {buildTagControls('Age Range', 'ageRange')}
       {buildTagControls('# of Participants', 'noOfParticipants')}
-      {buildTagControls('Themes', 'themes')}
-      {buildTagControls('Holidays', 'hollidays')}
+      {buildTagControls('Age Range', 'ageRange')}
+      {/* {buildTagControls('Themes', 'themes')} */}
+      {/* {buildTagControls('Holidays', 'hollidays')} */}
 
       {/* <button
         className='collection interactive'

@@ -17,6 +17,7 @@
     "serve-preview": "gatsby develop --host 0.0.0.0 --p $PORT"
   },
   "dependencies": {
+    "framer-motion": "^1.11.0",
     "gatsby": "^2.19.7",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.2",
