@@ -67,8 +67,8 @@ const PerformancesContainer = ({performances}) => {
                 <img src={desktopImageUrl} alt={title} />
                 <div className='cardText'>
                   <h3>{title}</h3>
-                  <div className='cardStatRow'><BsPersonFill /> {getPerformanceType(performanceType)}</div>
-                  <div className='cardStatRow'><BsFolderFill /> {getParticipantsRange(noOfParticipants)}</div>
+                  <div className='cardStatRow'><BsFolderFill /> {getPerformanceType(performanceType)}</div>
+                  <div className='cardStatRow'><BsPersonFill /> {getParticipantsRange(noOfParticipants)}</div>
                 </div>
               </Link>
             </motion.div>
@@ -118,6 +118,6 @@ const performanceListStyles = {
   '.cardStatRow svg': {
     fontSize: '1.25rem',
     position: 'relative',
-    top: '3px'
+    top: '4px'
   }
 }
