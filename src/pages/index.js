@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import {jsx, Container} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import React, {useEffect} from 'react' // eslint-disable-line
-import {graphql, Link} from 'gatsby'
+// import {graphql, Link} from 'gatsby'
 // import {mapEdgesToNodes, localizeText} from '../lib/helpers'
-import Img from 'gatsby-image'
-
-import LargeImageWText from '../components/modules/LargeImageWText'
+// import Img from 'gatsby-image'
 
 export default () => {
   // const productsEdges = data && data.homeProducts
@@ -13,8 +11,7 @@ export default () => {
 
   return (
     <>
-      <LargeImageWText />
-
+      <p>Home</p>
     </>
   )
 }

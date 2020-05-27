@@ -14,7 +14,7 @@ const BlockImageWText = ({image, text, layout}) => {
 
   return (
     <section sx={{
-      variant: 'sections.hpSection'
+      variant: 'sections.default'
     }}
     >
       <Container>

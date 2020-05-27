@@ -1,14 +1,14 @@
 import React from 'react'
 
-import StandardText from '../global/standardText'
+import StandardText from './global/standardText'
 // import ContentImage from '../global/contentImage'
-import VideoHero from '../global/videoHero'
-import HeroInnerModule from '../global/heroInnerModule'
-import Casettes from '../global/casettes'
-import Testimonials from '../global/testimonialsSlideshow'
-import ImageWTextModule from '../global/imageWithTextModule'
-import SectionWithItems from '../global/sectionWithItems'
-import PricingTable from '../global/pricingTable'
+import VideoHero from './global/videoHero'
+import HeroInnerModule from './global/heroInnerModule'
+import Casettes from './global/casettes'
+import Testimonials from './global/testimonialsSlideshow'
+import ImageWTextModule from './global/imageWithTextModule'
+import SectionWithItems from './global/sectionWithItems'
+import PricingTable from './global/pricingTable'
 
 const Modules = ({reactModule, type}) => {
   switch (type) {

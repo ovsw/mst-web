@@ -42,7 +42,7 @@ const TestimonialsSlideshow = ({data}) => {
   return (
     <section
       className='testimonial-slider' sx={{
-        // variant: 'sections.hpSection',
+        // variant: 'sections.default',
         bg: '#fbfde8'
       }}
     >

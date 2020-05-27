@@ -9,7 +9,7 @@ import Casette from './casette'
 const Casettes = ({data}) => {
   const {title, items} = data
   return (
-    <section className='slidecards' sx={{variant: 'sections.hpSection'}}>
+    <section className='slidecards' sx={{variant: 'sections.default'}}>
       <Container>
         {title && (
           <div className='slidecards__heading-wrapper'>

@@ -1,11 +1,21 @@
 const sections = {
   sections: {
-    hpSection: {
+    default: {
+      py: [5, null, 6, 6],
+      bg: 'background'
+    },
+    withMargin: {
       my: [5, null, 6, 6],
       bg: 'background'
     },
-    'hpSection--white': {
-      bg: 'red'
+    tight: {
+      bg: 'background'
+    },
+    white: {
+      bg: 'white'
+    },
+    primary: {
+      bg: 'primary'
     },
     rteSection: {
       py: [3, null, null, 3],

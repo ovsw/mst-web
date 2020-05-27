@@ -9,7 +9,7 @@ const PricingTable = ({data}) => {
   const {pricingTable} = data
   return (
     <section sx={{
-      variant: 'sections.hpSection'
+      variant: 'sections.default'
     }}
     >
       <Container>

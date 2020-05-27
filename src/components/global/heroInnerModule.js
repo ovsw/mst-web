@@ -40,8 +40,6 @@ const HeroInnerModule = ({data}) => {
           <img className='basic-page__hero-bg-image' src={desktopImageUrl} alt={data.caption} />
         </picture>
       </div>
-
-      <div className='basic-page__hero-overlay' />
       <div className='basic-page__hero-content'>
         <h1 className='basic-page__hero-title'>{data.title}</h1>
       </div>

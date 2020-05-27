@@ -46,9 +46,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
         <div className='menu-cross-links'><span className='menu-cross-links__title'><a href='tel:1-347-878-2431'> 347-878-2431</a></span></div>
       </div>
       <div className='top-nav__image-buttons-wrapper'>
-        <Link to='/virtual/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>virtual entertainment</span></Link>
-        <Link to='/programming/' className={`image-button ${activeSisteSection !== 'programming' ? 'sectionSwitch_btn--programming' : ''}`}><span>in-person programs</span></Link>
-        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--performances' : ''}`}><span>in-person performances</span></Link>
+        <Link to='/virtual/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Virtual Entertainment</span></Link>
+        <Link to='/programming/' className={`image-button ${activeSisteSection !== 'programming' ? 'sectionSwitch_btn--programming' : ''}`}><span>In-person Programs</span></Link>
+        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--performances' : ''}`}><span>In-person Performances</span></Link>
         {/* <a href='/programming/camp-package/' className='image-button'><span>Our Camp Package</span></a> */}
         {/* <a href='/virtual/recommended-camps/' className='image-button'><span>Camp Partnerships</span></a> */}
       </div>

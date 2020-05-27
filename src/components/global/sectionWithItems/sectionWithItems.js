@@ -8,7 +8,7 @@ const SectionWithItems = ({data}) => {
   // console.log(data)
   return (
     <section sx={{
-      variant: ['sections.hpSection', 'hpSection--white']
+      variant: ['sections.default', 'sections.white']
     }}
     >
       <Container sx={{textAlign: 'center'}}>
