@@ -17,13 +17,13 @@ const ContentImage = ({data}) => {
     .url()
 
   return (
-    <section sx={{variant: ['styles', 'sections.rteSection']}}>
+    <section sx={{variant: ['styles', 'sections.rteSection'], bg: 'backgrond'}}>
       <Container sx={{textAlign: 'center'}}>
         <figure>
           <picture>
             <source media='(min-width: 650px)' srcSet={imageUrl} />
             <source media='(min-width: 465px)' srcSet={imageUrl} />
-            <img src={imageUrl} alt='MISSSING ALT' />
+            <img src={imageUrl} alt='MISSSING ALT' sx={{maxWidth: '100%'}} />
           </picture>
           <figcaption sx={{color: 'textMuted', fontWeight: 'light'}}>{caption}</figcaption>
         </figure>

@@ -65,7 +65,7 @@ const tableStyles = {
       borderLeft: ['1px solid', null, null, 'none'],
       borderColor: 'gray.3',
       width: ['full', null, null, 'auto'],
-      textAlign: ['center', null, null, 'right'],
+      textAlign: 'center',
       color: 'text'
 
     }

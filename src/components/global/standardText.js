@@ -10,7 +10,7 @@ const StandardText = ({data}) => {
   const {text} = data
   return (
     <section
-      sx={{variant: ['styles', 'sections.rteSection']}}
+      sx={{variant: ['styles'], bg: 'background'}}
     >
       <Container sx={{maxWidth: '760px', py: 5}}>
         <BlockContent blocks={text} serializers={serializers} />

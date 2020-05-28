@@ -19,7 +19,7 @@ export default ({node}) => {
     .url()
   return (
     <figure className={`contentImage ${node.layout}`}>
-      <img src={imageUrl} alt={node.alt} />
+      <img src={imageUrl} alt={node.alt} sx={{maxWidth: '100%'}} />
       <figcaption sx={{color: 'textMuted', fontWeight: 'light'}}>{node.caption}</figcaption>
     </figure>
   )
