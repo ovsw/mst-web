@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import {jsx, Container} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import React from 'react' // eslint-disable-line
+import {motion} from 'framer-motion'
 
 import {buildImageObj} from '../../utils/helpers' // cn
 import {imageUrlFor} from '../../utils/image-url'
@@ -40,8 +41,17 @@ const HeroInnerModule = ({data}) => {
           <img className='basic-page__hero-bg-image' src={desktopImageUrl} alt={data.caption} />
         </picture>
       </div>
-      <div className='basic-page__hero-content'>
-        <h1 className='basic-page__hero-title'>{data.title}</h1>
+      <div
+        className='basic-page__hero-content'
+
+      >
+        <motion.h1
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{delay: 0.3}}
+          className='basic-page__hero-title'
+        >{data.title}
+        </motion.h1>
       </div>
     </section>
   )

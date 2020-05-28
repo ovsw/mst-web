@@ -68,7 +68,7 @@ export const usePerformancesMetaData = () => {
         themes: themes,
         image: image
       }
-      console.log(formattedPerformance)
+      // console.log(formattedPerformance)
       return formattedPerformance
     }
   )

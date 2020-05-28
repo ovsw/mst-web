@@ -8,13 +8,9 @@ import PerformancesContainer from './performances-container'
 class Wizard extends React.Component {
   constructor (props) {
     super(props)
-    // console.log('performance data:', performances)
 
     this.state = {
-      // performances: props.performances,
       userInputContainerClicked: false,
-      // searchTerm: '',
-      // fiters representation in state
       // each filter name corresponds with a performance attribute from performances
       // all filters are initially turned off  / inactive / false,
       passingTags: {
@@ -303,43 +299,18 @@ class Wizard extends React.Component {
       this.filteredCollected()
     )
     return filteredPerformances
-    // .filter(product => {
-    //   return product.name
-    //     .toLowerCase()
-    //     .includes(this.state.passingTags.search.inputTerm)
-    // })
   };
 
-  componentDidUpdate (prevProps) {
-    // Typical usage (don't forget to compare props):
-    // console.log('collected active filters:', this.filteredCollected())
-  }
-
   render () {
-    // console.log(this.state.performances)
     const {performances} = this.props
     const {passingTags, userInputContainerClicked} = this.state
-
-    const doWeHaveResults = this.filterPerformances().length > 0
-    const total = performances.length
 
     return (
       <Container>
 
         <Controls passingTags={passingTags} allFilterClickListener={this.allFilterClickListener} />
 
-        <>{console.log(doWeHaveResults)}
-          {(doWeHaveResults === true) && (
-            <h2>Currently showing {' '}
-              {userInputContainerClicked ? this.filterPerformances().length : total} {' '}
-              out of {total} performances:
-            </h2>
-          )}
-          {!doWeHaveResults && (
-            <h2>No results match your selection. Please select fewer tags.</h2>
-          )}
-          <PerformancesContainer performances={this.filterPerformances()} />
-        </>
+        <PerformancesContainer performances={this.filterPerformances()} totalNoOfPerformances={performances.length} userInputContainerClicked={userInputContainerClicked} />
 
       </Container>
     )

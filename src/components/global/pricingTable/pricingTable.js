@@ -5,7 +5,7 @@ import React from 'react' // eslint-disable-line
 import PricingTableRow from './pricingTableRow'
 
 const PricingTable = ({data}) => {
-  console.log(data)
+  // console.log(data)
   const {pricingTable} = data
   return (
     <section sx={{
