@@ -15,7 +15,7 @@ const Footer = () => {
 
           <div className='footer__social-media'>
             <a href='https://www.facebook.com/mainstages' target='_blank' rel='noopener noreferrer'><FaFacebook /></a>
-            <a href='https://twitter.com/mainstages' target='_blank' rel='noopener noreferrer'><FaTwitter /></a>
+            {/* <a href='https://twitter.com/mainstages' target='_blank' rel='noopener noreferrer'><FaTwitter /></a> */}
             <a href='https://www.instagram.com/mainstages/' target='_blank' rel='noopener noreferrer'><FaInstagram /></a>
             <a href='https://www.youtube.com/user/mainstages' target='_blank' rel='noopener noreferrer'><FaYoutube /></a>
 
