@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import {jsx, Container} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import React from 'react' // eslint-disable-line
-import {Link} from 'gatsby'
 
-import {FaFacebook, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
+import {FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa'
 
 import './Footer.css'
 
