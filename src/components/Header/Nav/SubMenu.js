@@ -16,7 +16,7 @@ const SubMenu = ({subItems, closeMobileNav}) => {
       <span className='top-nav__submenu-button' sx={{fontSize: 3}} onClick={toggleMenu}><FaPlus /></span>
       {isSubmenuOpen &&
         <ul className='top-nav__inner-list visible'>
-          {subItems.map(({title, link: {content: {main: {slug}}}}) => (
+          {subItems.map(({link: {content: {main: {slug, title}}}}) => (
             <li key={slug.current} className='top-nav__item-level-3 menu-item'>
               <Link to={slug.current} onClick={() => closeMobileNav()}>{title}</Link>
             </li>

@@ -9,7 +9,6 @@ import {mapEdgesToNodes} from '../utils/helpers'
 import BlockContent from '@sanity/block-content-to-react'
 
 const PostListItem = ({_rawContent: {main: {title, slug, excerpt}}}) => {
-  console.log(title)
   return (
     <div sx={{variant: 'styles', mb: 5}}>
       <Styled.h2><Link to={`/blog/${slug.current}`} sx={{lineHeight: 'tight'}}>{title}</Link></Styled.h2>
@@ -27,7 +26,6 @@ const Page = ({data}) => {
         <Styled.h1 sx={{mb: 5}}>mainstages Blog</Styled.h1>
 
         {mapEdgesToNodes(data.allSanityPost).map((post) => {
-          console.log(post)
           return (<PostListItem key={post._rawContent.main.slug.current} {...post} />)
         })}
       </Container>

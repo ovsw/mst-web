@@ -20,10 +20,10 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
       menuToShow = menuStructure[0]
       break
     case 'programming':
-      menuToShow = menuStructure[2]
+      menuToShow = menuStructure[1]
       break
     case 'performances':
-      menuToShow = menuStructure[1]
+      menuToShow = menuStructure[2]
       break
     default:
     // code
@@ -35,12 +35,27 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
         <div className='top-nav__menus' style={{maxHeight: '747.656px'}}>
           <p className='top-nav__mobile-title'>{menuToShow.title}</p>
           <ul className='top-nav__outer-list' id='menu-main-menu'>
-            {menuToShow.items.map(({title, link: {content: {main: {slug}}}, subItems = []}) => (
-              <li key={slug.current} className={`top-nav__item-level-1 menu-item ${subItems.length > 0 ? 'top-nav__has-children' : ''}`}>
-                <Link to={`/${slug.current}/`} onClick={() => closeMobileNav()}>{title}</Link>
-                {(subItems.length > 0) && <SubMenu subItems={subItems} closeMobileNav={closeMobileNav} />}
-              </li>
-            ))}
+            {menuToShow.items.map((item) => {
+              console.log(item)
+              let linkUrl = null
+              let title = null
+              const subItems = []
+
+              if (item._type === 'internalLinkWSlug') {
+                title = item.title
+                linkUrl = item.url
+              } else {
+                title = item.title
+                linkUrl = item.link.content.main.slug.current
+              }
+
+              return (
+                <li key={linkUrl} className={`top-nav__item-level-1 menu-item ${subItems.length > 0 ? 'top-nav__has-children' : ''}`}>
+                  <Link to={`/${linkUrl}/`} onClick={() => closeMobileNav()}>{title}</Link>
+                  {(subItems.length > 0) && <SubMenu subItems={subItems} closeMobileNav={closeMobileNav} />}
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className='menu-cross-links'><span className='menu-cross-links__title'><a href='tel:1-347-878-2431'> 347-878-2431</a></span></div>

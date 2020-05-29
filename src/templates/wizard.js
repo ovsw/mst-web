@@ -10,8 +10,6 @@ import {usePerformancesMetaData} from '../hooks/use-performances-metadata'
 const WizardPage = ({pageContext}) => {
   const performanceData = usePerformancesMetaData()
 
-  console.log(pageContext.main.content)
-
   return (
     <section sx={{variant: 'sections.default'}}>
       <Container sx={{variant: 'styles'}}>

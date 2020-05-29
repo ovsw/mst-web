@@ -12,18 +12,38 @@ export const useSiteMenusStructure = () => {
             title
             items {
               ... on SanityInternalLink {
+                _type
                 title
                 link {
-                  content {
-                    main {
-                      slug {
-                        current
+                  __typename
+                  ... on SanityPage {
+                    content {
+                      main {
+                        slug {
+                          current
+                        }
+                      }
+                    }
+                  }
+                  ... on SanityPageWizard {
+                    content {
+                      main {
+                        slug {
+                          current
+                        }
                       }
                     }
                   }
                 }
               }
+              ... on SanityInternalLinkWSlug {
+                _key
+                _type
+                url:link
+                title
+              }
               ... on SanityInternalLinkWChildren {
+                _type
                 title
                 link {
                   content {
@@ -31,18 +51,30 @@ export const useSiteMenusStructure = () => {
                       slug {
                         current
                       }
+                      title
                     }
                   }
                 }
                 subItems {
-                  ... on SanityInternalLink {
-                    title
-                    link{
-                      content{
-                        main{
-                          slug{
+                  link {
+                    __typename
+                    ... on SanityPage {
+                      content {
+                        main {
+                          slug {
                             current
                           }
+                          title
+                        }
+                      }
+                    }
+                    ... on SanityPageWizard {
+                      content {
+                        main {
+                          slug {
+                            current
+                          }
+                          title
                         }
                       }
                     }
