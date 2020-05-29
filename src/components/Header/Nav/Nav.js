@@ -20,10 +20,10 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
       menuToShow = menuStructure[0]
       break
     case 'programming':
-      menuToShow = menuStructure[1]
+      menuToShow = menuStructure[2]
       break
     case 'performances':
-      menuToShow = menuStructure[2]
+      menuToShow = menuStructure[1]
       break
     default:
     // code
