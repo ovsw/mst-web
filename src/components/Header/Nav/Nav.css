@@ -317,18 +317,18 @@
 
       /* menu cross-links begin */
       .menu-cross-links {
-        font-family: Jubilat, serif;
+        /* font-family: Jubilat, serif; */
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 4rem;
       }
-      @media (min-width: 768px) {
+      /* @media (min-width: 768px) {
       .menu-cross-links {
           height: 4rem
       }
-       }
+       } */
       .menu-cross-links__title {
           background-color: #fff;
           font-size: 1rem;
