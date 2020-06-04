@@ -8,6 +8,7 @@ import './Nav.css'
 
 import {useSiteMenusStructure} from '../../../hooks/use-site-menus-structure'
 import {appContext} from '../../../context'
+import {FaPhone} from 'react-icons/fa'
 
 const Nav = ({isMobileNavOpen, closeMobileNav}) => {
   const menuStructure = useSiteMenusStructure()
@@ -70,7 +71,7 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
             })}
           </ul>
         </div>
-        <div className='menu-cross-links'><span className='menu-cross-links__title'><a href='tel:1-347-878-2431'> 347-878-2431</a></span></div>
+        <div className='menu-cross-links'><span className='menu-cross-links__title'><a href='tel:1-347-878-2431'><FaPhone /> 347-878-2431</a></span></div>
       </div>
       <div className='top-nav__image-buttons-wrapper'>
         <Link to='/virtual/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Virtual Entertainment</span></Link>
