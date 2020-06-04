@@ -22,19 +22,19 @@ const Layout = ({children}) => {
         },
         img: {
           maxWidth: '100%'
-        },
+        }
         // 'a.externalLink::after': {
         //   content: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==)',
         //   margin: '0 3px 0 3px',
         //   color: 'red'
         // },
-        '.slick-track': {
-          display: 'flex',
-          '.slick-slide': {
-            display: 'flex',
-            height: 'auto'
-          }
-        }
+        // '.slick-track': {
+        //   display: 'flex',
+        //   '.slick-slide': {
+        //     display: 'flex',
+        //     height: 'auto'
+        //   }
+        // }
       })}
       />
       <Header />
