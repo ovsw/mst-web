@@ -13,7 +13,7 @@ import './layout.css'
 const Layout = ({children}) => {
   const {isMobileNavOpen} = useContext(appContext)
   return (
-    <div sx={{pt: '90px', overflow: 'hidden'}}>
+    <div sx={{pt: '80px', overflow: 'hidden'}}>
       <Global styles={theme => ({
         '*': {boxSizing: 'border-box'},
         body: {
