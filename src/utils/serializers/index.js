@@ -11,6 +11,7 @@ import CTABlock from './CTABlock'
 import Button from './Button'
 import CommonText from './CommonText'
 import ImgTextColumns from './imgTextColumns'
+import PullQuote from './PullQuote'
 
 import isAbsoluteURL from 'is-absolute-url'
 
@@ -41,7 +42,8 @@ const serializers = {
     iframeEmbed: Embed,
     commonText: CommonText,
     commonTextRef: CommonText,
-    imgTextColumns: ImgTextColumns
+    imgTextColumns: ImgTextColumns,
+    pullQuote: PullQuote
   },
   marks: {
     link: ({mark, children}) => {
