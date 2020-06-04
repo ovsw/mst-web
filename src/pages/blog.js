@@ -7,13 +7,19 @@ import {mapEdgesToNodes} from '../utils/helpers'
 // import RenderModules from '../utils/renderModules'
 // import {graphql, Link} from 'gatsby'
 import BlockContent from '@sanity/block-content-to-react'
+import {format, parseISO} from 'date-fns'
 
-const PostListItem = ({_rawContent: {main: {title, slug, excerpt}}}) => {
+const PostListItem = ({_rawContent}) => {
+  const {main: {title, slug, excerpt, publishedAt, author}} = _rawContent
+  console.log('author', author)
   return (
-    <div sx={{variant: 'styles', mb: 5}}>
-      <Styled.h2><Link to={`/blog/${slug.current}`} sx={{lineHeight: 'tight'}}>{title}</Link></Styled.h2>
-      <BlockContent blocks={excerpt} />
-    </div>
+    <>
+      <div sx={{variant: 'styles', mb: 5, '.meta': {fontSize: 1, color: 'textMuted'}}}>
+        <Styled.h2><Link to={`/blog/${slug.current}`} sx={{lineHeight: 'tight'}}>{title}</Link></Styled.h2>
+        <p className='meta'>posted on {format(parseISO(publishedAt), 'MMM dd yyy')}{author ? `, by ${author.content.main.name}` : ''} </p>
+        <BlockContent blocks={excerpt} />
+      </div>
+    </>
   )
 }
 
@@ -37,10 +43,10 @@ export default Page
 
 export const query = graphql`
   query HomePageQuery {
-    allSanityPost {
+    allSanityPost(sort: {fields: content___main___publishedAt, order: DESC}) {
       edges {
         node {
-          _rawContent(resolveReferences: {maxDepth: 9})
+          _rawContent(resolveReferences: {maxDepth: 10})
         }
       }
     }

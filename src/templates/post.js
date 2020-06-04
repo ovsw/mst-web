@@ -6,10 +6,11 @@ import RenderModules from '../utils/renderModules'
 // import {graphql, Link} from 'gatsby'
 
 const Post = ({path, pageContext}) => {
-  // console.log(path, pageContext)
+  console.log(path, pageContext)
 
   const {
     main: {
+      publishedAt,
       modules,
       slug
     },
@@ -20,6 +21,8 @@ const Post = ({path, pageContext}) => {
     <>
       <SEO metaInfo={meta} pagePath={slug.current} />
       {RenderModules(modules)}
+      {publishedAt}
+
     </>
   )
 }

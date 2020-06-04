@@ -31,7 +31,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
           }
         }
       }
-      allSanityPost {
+      allSanityPost(sort: {fields: content___main___publishedAt, order: DESC}) {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
