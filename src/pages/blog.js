@@ -11,7 +11,6 @@ import {format, parseISO} from 'date-fns'
 
 const PostListItem = ({_rawContent}) => {
   const {main: {title, slug, excerpt, publishedAt, author}} = _rawContent
-  console.log('author', author)
   return (
     <>
       <div sx={{variant: 'styles', mb: 5, '.meta': {fontSize: 1, color: 'textMuted'}}}>

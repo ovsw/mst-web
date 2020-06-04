@@ -115,7 +115,7 @@ export default {
     },
     h1: {
       ...sharedHeadingStyles,
-      fontSize: [6, 6, 7, 8]
+      fontSize: [5, 6, 7, 8]
     },
     h2: {
       ...sharedHeadingStyles,
