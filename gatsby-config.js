@@ -92,6 +92,7 @@ module.exports = {
         overlayDrafts: true
       }
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-theme-ui'
   ]
 

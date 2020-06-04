@@ -2,3 +2,9 @@
   command = "npm run build"
   functions = "functions"
   publish = "public"
+
+[[redirects]]
+  from = "/"
+  to = "/virtual/"
+  status = 302
+  force = true
