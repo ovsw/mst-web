@@ -11,7 +11,7 @@ import serializers from '../utils/serializers'
 import {format, parseISO} from 'date-fns'
 
 const Post = ({path, pageContext}) => {
-  console.log(path, pageContext)
+  // console.log(path, pageContext)
 
   const {
     main: {
