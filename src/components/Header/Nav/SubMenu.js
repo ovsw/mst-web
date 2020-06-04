@@ -18,7 +18,7 @@ const SubMenu = ({subItems, closeMobileNav}) => {
         <ul className='top-nav__inner-list visible'>
           {subItems.map(({link: {content: {main: {slug, title}}}}) => (
             <li key={slug.current} className='top-nav__item-level-3 menu-item'>
-              <Link to={slug.current} onClick={() => closeMobileNav()}>{title}</Link>
+              <Link to={`/${slug.current}/`} onClick={() => closeMobileNav()}>{title}</Link>
             </li>
           ))}
         </ul>}
