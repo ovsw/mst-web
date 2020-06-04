@@ -43,14 +43,22 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
               // console.log(item)
               let linkUrl = null
               let title = null
-              const subItems = []
+              let subItems = []
 
-              if (item._type === 'internalLinkWSlug') {
-                title = item.title
-                linkUrl = item.url
-              } else {
-                title = item.title
-                linkUrl = item.link.content.main.slug.current
+              switch (item._type) {
+                case ('internalLinkWSlug'):
+                  title = item.title
+                  linkUrl = item.url
+                  break
+                case ('internalLinkWChildren'):
+                  title = item.title
+                  linkUrl = item.link.content.main.slug.current
+                  subItems = item.subItems
+                  break
+                case ('internalLink'):
+                  title = item.title
+                  linkUrl = item.link.content.main.slug.current
+                  break
               }
 
               return (
