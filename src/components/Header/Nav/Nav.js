@@ -33,7 +33,6 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
       )[0]
       break
   }
-  // TODO: add responsive tabs to nav
   return (
     <nav className={`top-nav__header-menu ${isMobileNavOpen ? 'visible' : ''}`}>
       <div className='top-nav__main-menu-wrapper'>
