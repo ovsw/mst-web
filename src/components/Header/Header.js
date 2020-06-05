@@ -29,7 +29,7 @@ const Header = () => {
         <Nav isMobileNavOpen={isMobileNavOpen} closeMobileNav={closeMobileNav} />
         <a className='header__menu-trigger' onClick={toggleNav}>
           <span className='label'>Menu</span>
-          <div className='header__menu-icon'>
+          <div className={`header__menu-icon ${isMobileNavOpen ? 'open' : ''}`}>
             <div className='header__menu-icon__middle' />
           </div>
         </a>
