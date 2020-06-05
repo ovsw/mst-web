@@ -4,7 +4,7 @@ import React from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
 
 import '../styles/programmingHome.css'
-import {FaChevronRight, FaChevronDown} from 'react-icons/fa'
+import {FaChevronRight} from 'react-icons/fa'
 
 const ProgrammingLandingContent = () => {
   return (
