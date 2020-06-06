@@ -12,7 +12,7 @@ const StandardText = ({data}) => {
     <section
       sx={{variant: ['styles'], bg: 'background'}}
     >
-      <Container sx={{maxWidth: '760px', my: [4, 5]}}>
+      <Container sx={{maxWidth: '760px', py: [4, 5]}}>
         <BlockContent blocks={text} serializers={serializers} />
       </Container>
     </section>
