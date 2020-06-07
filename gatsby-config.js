@@ -9,7 +9,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`
 })
 
-const path = require('path')
+// const path = require('path')
 const clientConfig = require('./client-config')
 
 const {createProxyMiddleware} = require('http-proxy-middleware')
@@ -48,30 +48,19 @@ module.exports = {
         display: 'swap'
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: config.siteTitle,
-    //     short_name: config.siteTitleShort,
-    //     description: config.siteDescription,
-    //     start_url: config.pathPrefix,
-    //     background_color: config.backgroundColor,
-    //     theme_color: config.themeColor,
-    //     display: 'standalone',
-    //     icons: [
-    //       {
-    //         src: '/favicons/android-chrome-192x192.png',
-    //         sizes: '192x192',
-    //         type: 'image/png'
-    //       },
-    //       {
-    //         src: '/favicons/android-chrome-512x512.png',
-    //         sizes: '512x512',
-    //         type: 'image/png'
-    //       }
-    //     ]
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'mainstages',
+        short_name: 'mainstages',
+        description: 'mainstages provides virtual entertainment for families and organizations with interactive weekly classes for kids, variety shows, and online birthday parties!',
+        start_url: '/',
+        background_color: '#fcfef7',
+        theme_color: '#87CC2F',
+        display: 'standalone',
+        icon: 'src/images/icon.png'
+      }
+    },
     // 'gatsby-plugin-sitemap',
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
