@@ -1,4 +1,4 @@
-import {skewedRight} from './common'
+// import {skewedRight} from './common'
 
 export const sharedButtonStyles = {
   padding: '.5rem .9rem',
@@ -11,7 +11,7 @@ export const sharedButtonStyles = {
   cursor: 'pointer',
   lineHeight: 'inherit',
   backgroundColor: 'primaryDark',
-  mb: 3,
+  my: 3,
   borderRadius: 'default',
   boxShadow: '0 -3px 0 0 rgba(24,24,24,.15) inset, 0 3px 10px rgba(0,0,0,0.3)',
   py: '0.7rem',

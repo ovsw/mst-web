@@ -24,12 +24,12 @@ const BlockImageWText = ({image, text, layout}) => {
         }}
         >
           <div
+            className='darkBg'
             sx={{
               variant: 'styles',
               width: ['full', null, null, null, '50%'],
               bg: 'primary',
-              px: 5,
-              py: 6
+              p: 5
             }}
           >
             <BlockContent blocks={text} serializers={serializers} className='darkBg' />

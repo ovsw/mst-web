@@ -33,7 +33,7 @@ const HeroInnerModule = ({data}) => {
     .url()
 
   return (
-    <section className='basic-page__hero'>
+    <section className='basic-page__hero' sx={{py: '1px'}}>
       <div className='basic-page__hero-bg-image-source'>
         <picture>
           <source srcSet={mobileImageUrl} media='(max-width: 768px)' />

@@ -42,7 +42,7 @@ const FloatedImageWText = ({image, text, layout}) => {
           <div sx={{
             variant: 'styles',
             px: [2, null, null, 5],
-            py: [3, null, null, 6]
+            py: [3, null, null, 5]
           }}
           >
             <BlockContent blocks={text} serializers={serializers} />
