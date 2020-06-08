@@ -4,8 +4,15 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+// const fs = require('fs')
+
 exports.createPages = async ({graphql, actions, reporter}) => {
-  const {createPage} = actions
+  const {createRedirect, createPage} = actions
+
+  // fs.writeFile('./static/helloworld.txt', 'Hello World!', function (err) {
+  //   if (err) return console.log(err)
+  //   console.log('Hello World > helloworld.txt')
+  // })
 
   // Query Pages
   const pagesQuery = await graphql(`
@@ -45,12 +52,33 @@ exports.createPages = async ({graphql, actions, reporter}) => {
           }
         }
       }
+      sanityRedirects(_id: {eq: "redirects"}) {
+        list {
+          fromPath
+          toPath
+          isPermanent
+        }
+      }
     }
   `)
 
   if (pagesQuery.errors) {
     throw pagesQuery.errors
   }
+
+  // redirects
+
+  // redirect home page to /virtual/
+  createRedirect({fromPath: '/', toPath: '/virtual/', isPermanent: true, force: true})
+
+  // process redirects from Sanity
+  const redirectsList = pagesQuery.data.sanityRedirects.list || []
+  redirectsList.forEach(({fromPath, toPath, isPermanent}) => {
+    reporter.info(`Creating redirect: ${fromPath} -> ${toPath} - ${isPermanent ? '301' : '302'}`)
+    createRedirect({fromPath, toPath, isPermanent})
+  })
+
+  // pages
 
   const pages = pagesQuery.data.allSanityPage.edges || []
   const pagesHidden = pagesQuery.data.allSanityPageHidden.edges || []
