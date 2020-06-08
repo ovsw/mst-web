@@ -24,7 +24,7 @@ const getTwitterImage = (image) => {
 
 const SEO = ({pagePath, metaInfo}) => {
   const {metaInformation: globalMetaInfo} = useSiteGlobalSettings()
-  console.log('globalmeta', globalMetaInfo)
+  // console.log('globalmeta', globalMetaInfo)
 
   const title = metaInfo ? metaInfo.metaTitle ? `${metaInfo.metaTitle} | mainstages` : globalMetaInfo.metaTitle : globalMetaInfo.metaTitle
   const metaDescription = metaInfo ? metaInfo.metaDescription ? metaInfo.metaDescription : globalMetaInfo.metaDescription : globalMetaInfo.metaDescription
