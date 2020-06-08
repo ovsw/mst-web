@@ -38,7 +38,7 @@ const BlockImageWText = ({image, text, layout}) => {
           <BackgroundImage
             fluid={fluidProps} sx={{
               backgroundPosition: 'center center',
-              width: '50%'
+              width: ['full', null, null, null, '50%']
             }}
           />
         </div>

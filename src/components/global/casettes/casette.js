@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {jsx, Styled} from 'theme-ui'
 import React, {useContext} from 'react' // eslint-disable-line
-import {Link} from 'gatsby'
+import {AnchorLink} from 'gatsby-plugin-anchor-links'
 
 // import styles from './casettes.module.css'
 
@@ -33,7 +33,7 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, imag
     >
       {/* ^^ this was used for bg image */}
       {/* <div className={`slidecards__card-wrapper n-${i}`}> */}
-      {(imageUrl !== '') && <img src={imageUrl} alt={alt || title} sx={{maxWidth: '100%', display: 'block'}} />}
+      {(imageUrl !== '') && <img src={imageUrl} alt={alt || title} sx={{maxWidth: '100%', display: 'block', mt: 0}} />}
       <div sx={{
         flex: '1',
         p: 3,
@@ -51,7 +51,7 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, imag
         </Styled.h4>
         {subtitle && <h4 className='slidecards__card-subtitle'>{subtitle}</h4>}
         <Styled.p sx={{fontSize: 1, mb: 4, mt: 0}} className='slidecards__card-description'>{shortDescription}</Styled.p>
-        <Link
+        <AnchorLink
           to={buttonUrl} sx={{
             variant: 'buttons.simpleAccentDark',
             marginTop: 'auto',
@@ -65,7 +65,7 @@ const Casette = ({title, subtitle, shortDescription, buttonText, buttonUrl, imag
             boxShadow: 'none'
           }}
         >{buttonText}
-        </Link>
+        </AnchorLink>
         {/* </div> */}
       </div>
     </div>

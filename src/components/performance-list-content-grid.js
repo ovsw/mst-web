@@ -47,7 +47,7 @@ const PerformancesList = ({performances}) => {
 export default PerformancesList
 
 const performanceGridStyles = {
-  pb: 5,
+  pb: [4, 4, 5],
   '.cardContainerWrapper': {
     display: 'flex',
     flexWrap: 'wrap',
@@ -57,5 +57,8 @@ const performanceGridStyles = {
     p: 3,
     width: ['full', null, '1/2', '1/3', '1/'],
     display: 'flex'
+  },
+  img: {
+    mt: 0
   }
 }

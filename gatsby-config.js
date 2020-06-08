@@ -90,6 +90,12 @@ module.exports = {
         overlayDrafts: true
       }
     },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -200
+      }
+    },
     'gatsby-plugin-netlify',
     'gatsby-plugin-theme-ui'
   ]
