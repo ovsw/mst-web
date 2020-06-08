@@ -27,6 +27,9 @@ module.exports = {
       })
     )
   },
+  siteMetadata: {
+    siteUrl: 'https://www.mainstages.com'
+  },
   plugins: [
     'gatsby-plugin-layout',
     {
@@ -61,17 +64,23 @@ module.exports = {
         icon: 'src/images/icon.png'
       }
     },
-    // 'gatsby-plugin-sitemap',
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: config.googleAnalyticsID,
-    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
-    //     head: true
-    //     // sampleRate: 5,
-    //     // siteSpeedSampleRate: 10
-    //   }
-    // },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-22185905-1',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-facebook-pixel',
+      options: {
+        pixelId: '1153724114791502'
+      }
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -84,5 +93,4 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-theme-ui'
   ]
-
 }
