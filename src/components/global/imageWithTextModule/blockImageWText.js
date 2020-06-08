@@ -14,22 +14,24 @@ const BlockImageWText = ({image, text, layout}) => {
 
   return (
     <section sx={{
-      variant: 'sections.default'
+      variant: 'sections.default',
+      // bg: 'primary',
+      py: [0, null, 0, 0]
     }}
     >
-      <Container>
+      <div sx={{maxWidth: ['none', null, null, null, null, '1660px'], mx: [0, null, null, null, null, 'auto']}}>
         <div sx={{
           display: 'flex',
+          flexWrap: 'wrap',
           flexDirection: layout === 'right' ? 'row-reverse' : 'row'
         }}
         >
           <div
-            className='darkBg'
             sx={{
               variant: 'styles',
               width: ['full', null, null, null, '50%'],
-              bg: 'primary',
-              p: 5
+              p: 5,
+              py: 6
             }}
           >
             <BlockContent blocks={text} serializers={serializers} className='darkBg' />
@@ -38,23 +40,14 @@ const BlockImageWText = ({image, text, layout}) => {
           <BackgroundImage
             fluid={fluidProps} sx={{
               backgroundPosition: 'center center',
-              width: ['full', null, null, null, '50%']
+              width: ['full', null, null, null, '50%'],
+              minHeight: ['400px']
             }}
           />
         </div>
-      </Container>
+      </div>
     </section>
   )
 }
 
 export default BlockImageWText
-
-// <BackgroundImage
-//         fluid={fluidProps} sx={{
-//           backgroundPosition: 'center center',
-//           gridColumnStart: [`${r}1`, null, null, `${r}3`],
-//           gridColumnEnd: [`${r}6`, null, null, `${r}5`],
-//           gridRowStart: '1',
-//           gridRowEnd: ['2', null, '5']
-//         }}
-//       />

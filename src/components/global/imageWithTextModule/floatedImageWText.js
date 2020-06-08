@@ -15,6 +15,7 @@ const FloatedImageWText = ({image, text, layout}) => {
   return (
     <section sx={{
       variant: ['sections.default', 'sections.primary'],
+      py: [0, null, null, 4, 5],
       display: 'grid',
       gridTemplateColumns: '100px 1fr 1fr 1fr 100px',
       gridTemplateRows: ['400px 1fr 1fr 200px', null, '100px 1fr 1fr 100px']
