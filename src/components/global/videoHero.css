@@ -8,17 +8,17 @@
   overflow: hidden;
 
   min-height: 400px;
- 
+
 }
 @media (min-width: 1024px) {
 .hero {
     min-height: 70vh
- 
+
 }
  }
 .hero__video-bg {
     position: absolute;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
     z-index: -100;
 
@@ -92,7 +92,7 @@
     color: #fff;
     margin: 2rem 1rem;
     font-weight: 400;
-    
+
   }
 .hero__hookline p {
       /* box-shadow: 0.5rem 0 0 rgba(233, 255, 233,.9), -0.5rem 0 0 rgba(233, 255, 233,.9);
@@ -119,7 +119,7 @@
 @media (min-width: 1024px) {
 .hero__hookline {
       font-size: 1.2rem
-    
+
   }
       .hero__hookline p{
         line-height: 2.8rem;
@@ -134,9 +134,9 @@
     letter-spacing: 0.07rem;
     /* #301111 */
     text-decoration: none;
-    
+
     -webkit-box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.3);
-    
+
             box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.3);
   }
 @media (min-width: 1024px) {
@@ -176,7 +176,6 @@
       width: 10%;
     }
 .hero--performances {
-    
       background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMU8wEAAH4AZHeeAz4AAAAASUVORK5CYII=), url('/images/performances-hero.jpg');
       background-size: auto, cover;
   }
@@ -190,3 +189,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMUqwcAALEAlw+6NSgAAAAASUVORK5CYII='), url('/images/families-hero.jpg');
     background-size: auto, cover;
   }
+.hero--live {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMUqwcAALEAlw+6NSgAAAAASUVORK5CYII='), url('/images/hero-bg-live.jpg');
+    background-size: auto, cover;
+}

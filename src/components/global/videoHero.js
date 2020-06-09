@@ -14,20 +14,28 @@ const VideoHero = ({data}) => {
     setCourtainClass('open')
   })
   let videoSource = null
+  let posterBg = null
+  let heroType = 'performances'
   switch (video) {
     case 'performances1' :
       videoSource = 'https://mstvideo-ac97.kxcdn.com/mainstages-intro-montage.mp4'
+      posterBg = '/images/hero-bg-live.jpg'
+      heroType = 'performances'
       break
     case 'live1' :
       videoSource = 'https://lrw-ac97.kxcdn.com/mainstages-families-bg-video.mp4'
+      posterBg = '/images/hero-bg-live.jpg'
+      heroType = 'live'
       break
     default :
       videoSource = 'https://mstvideo-ac97.kxcdn.com/mainstages-intro-montage.mp4'
   }
 
   return (
-    <section className='hero hero--performances'>
-      <video className='hero__video-bg' playsInline='' autoPlay muted loop poster='/images/video-placeholder.jpg' id='heroVideo'>
+    <section
+      className={`hero hero--${heroType}`}
+    >
+      <video className='hero__video-bg' playsInline='' autoPlay muted loop poster={posterBg} id='heroVideo'>
         <source data-src={videoSource} type='video/mp4' src={videoSource} />
         {/* http://odcv-ac97.kxcdn.com/oasis-intro-short-hq.mp4  */}
         {/* <source src="http://odcv-ac97.kxcdn.com/oasis-intro-short-hq.ogv" type="video/ogg"/>

@@ -47,18 +47,18 @@
     margin-bottom:30px;
     font-size: 2.5rem;
     text-align: center;
-    
+
   }
 @media (min-width: 768px) {
 .hero__mainTitle{
       text-align: left
-    
+
   }
  }
 @media (min-width: 1024px) {
 .hero__mainTitle{
       font-size: 3.7rem
-    
+
   }
  }
 .hero__tagLine {
@@ -66,18 +66,18 @@
     font-family: europa, sans-serif;
     color: #301111;
     font-size: 1rem;
-    text-align: center;  
+    text-align: center;
     display: block;
-    
+
   }
 @media (min-width: 768px) {
 .hero__tagLine {
       font-size: 1.125rem;
       display: inline-block
-    
+
   }
-     
-      
+
+
       .hero__tagLine br  {
         display: none;
       }
@@ -106,7 +106,7 @@
   background-attachment: fixed;
   padding: 1px;
 }
-.package-slide__content-wrapper { 
+.package-slide__content-wrapper {
     background-position: top left;
     position: relative;
     padding: 1rem;
@@ -132,7 +132,7 @@
       background-image: -webkit-radial-gradient(0% 0%, circle, #ffffff 0%, #deceff 60%);
       background-image: -o-radial-gradient(0% 0%, circle, #ffffff 0%, #deceff 60%);
       background-image: radial-gradient(circle at 0% 0%, #ffffff 0%, #deceff 60%);
-      
+
     }
 .packageSlide4 .package-slide__content-wrapper {
       background-image: -webkit-radial-gradient(0% 0%, circle, #ffffff 0%, #adf5ff 60%);
@@ -148,7 +148,7 @@
 .packageSlide6 .package-slide__content-wrapper {
       background-image: -webkit-radial-gradient(0% 0%, circle, #ffffff 0%, #fdedb0 60%);
       background-image: -o-radial-gradient(0% 0%, circle, #ffffff 0%, #fdedb0 60%);
-      background-image: radial-gradient(circle at 0% 0%, #ffffff 0%, #fdedb0 60%);      
+      background-image: radial-gradient(circle at 0% 0%, #ffffff 0%, #fdedb0 60%);
     }
 @media (min-width: 768px) {
 .package-slide__content-wrapper {
@@ -172,7 +172,7 @@
         background-image: url('/images/programming/whole-adnotated.png'), -webkit-radial-gradient(20% 43%, ellipse, rgba(232,252,219,1) 0%,rgba(234,224,255,1) 31%,rgba(224,250,255,1) 50%,rgba(255,224,230,1) 75%,rgba(249,243,219,1) 100%);
         background-image: url('/images/programming/whole-adnotated.png'), -o-radial-gradient(20% 43%, ellipse, rgba(232,252,219,1) 0%,rgba(234,224,255,1) 31%,rgba(224,250,255,1) 50%,rgba(255,224,230,1) 75%,rgba(249,243,219,1) 100%);
         background-image: url('/images/programming/whole-adnotated.png'), radial-gradient(ellipse at 20% 43%, rgba(232,252,219,1) 0%,rgba(234,224,255,1) 31%,rgba(224,250,255,1) 50%,rgba(255,224,230,1) 75%,rgba(249,243,219,1) 100%);
-         
+
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8fcdb+0,f1eaff+31,eafcff+50,ffeaee+74,fcf8e8+100 */
       }
 
@@ -205,7 +205,7 @@
       .packageSlide6 .package-slide__content-wrapper {
         background-image: url('/images/programming/front-adnotated.png'), -webkit-radial-gradient(20% 43%, ellipse, #ffffff 0%, #fdedb0 30%);
         background-image: url('/images/programming/front-adnotated.png'), -o-radial-gradient(20% 43%, ellipse, #ffffff 0%, #fdedb0 30%);
-        background-image: url('/images/programming/front-adnotated.png'), radial-gradient(ellipse at 20% 43%, #ffffff 0%, #fdedb0 30%);      
+        background-image: url('/images/programming/front-adnotated.png'), radial-gradient(ellipse at 20% 43%, #ffffff 0%, #fdedb0 30%);
       }
  }
 @media (min-width: 1024px) {
@@ -236,24 +236,24 @@
 .package-slide__mobile-image {
     display: block;
     margin: 0 auto;
-  
+
   }
 @media (min-width: 768px) {
 .package-slide__mobile-image {
       display: none
-  
+
   }
  }
 @media (min-width: 768px) {
 .package-slide__content {
       margin-left: 55%
-    
+
   }
  }
 .package-slide .body-rte h3 {
       font-size: 1.4rem;
     }
-.package-slide .body-rte p {
+.package-slide .body-rte {
       color: rgb(110, 94, 94);
     }
 .package-slide .body-rte p a, .package-slide .body-rte li a {
@@ -313,7 +313,7 @@
     font-size: 1rem;
     font-weight:  400;
     color: rgba(48, 17, 17, 0.8);
-   
+
     margin-bottom: 1rem;
   }
 @media (min-width: 768px) {
