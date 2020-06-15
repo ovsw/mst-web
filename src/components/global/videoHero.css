@@ -182,6 +182,7 @@
 .hero--live {
     background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMU8wEAAH4AZHeeAz4AAAAASUVORK5CYII=), url('/images/hero-bg-live.jpg');
     background-size: auto, cover;
+    background-position: center center;
 }
 @media (min-width: 1024px) {
     .hero--performances {
