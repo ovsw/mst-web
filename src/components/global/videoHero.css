@@ -179,17 +179,25 @@
       background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMU8wEAAH4AZHeeAz4AAAAASUVORK5CYII=), url('/images/performances-hero.jpg');
       background-size: auto, cover;
   }
+.hero--live {
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMU8wEAAH4AZHeeAz4AAAAASUVORK5CYII=), url('/images/hero-bg-live.jpg');
+    background-size: auto, cover;
+}
 @media (min-width: 1024px) {
-.hero--performances {
+    .hero--performances {
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=');
         background-size: auto
-  }
+    }
+    .hero--live {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=');
+        background-size: auto
+    }
  }
 .hero--families {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMUqwcAALEAlw+6NSgAAAAASUVORK5CYII='), url('/images/families-hero.jpg');
     background-size: auto, cover;
   }
-.hero--live {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMUqwcAALEAlw+6NSgAAAAASUVORK5CYII='), url('/images/hero-bg-live.jpg');
-    background-size: auto, cover;
-}
+/*.hero--live {*/
+/*    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMUqwcAALEAlw+6NSgAAAAASUVORK5CYII='), url('/images/hero-bg-live.jpg');*/
+/*    background-size: auto, cover;*/
+/*}*/
