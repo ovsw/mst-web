@@ -10,10 +10,11 @@ const Layout = ({path, children}) => {
   const {setActiveSisteSection} = useContext(appContext)
 
   useEffect(() => {
+    console.log(path)
     // calculate what section we are in
-    const firstPathSegment = path.split('/')[1]
+    const firstPathSegment = path ? path.split('/')[1] : 'virtual'
     // if no segment in URL then set the default section to virtual
-    const currentSection = firstPathSegment || 'virtual'
+    const currentSection = firstPathSegment
 
     // this is so that when we visit a root page (/about-us/) we still display the appropriate menu based on the section we were previously on (virtual, performances or programming):
     if (currentSection === 'virtual' || currentSection === 'performances' || currentSection === 'programming') { // check if the segment is relevant (
