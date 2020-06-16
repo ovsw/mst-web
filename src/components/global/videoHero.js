@@ -50,8 +50,8 @@ const VideoHero = ({data}) => {
         >{buttonText}
         </Link>
       </div>
-      <img className={`${s.hero__leftCurtain} ${courtainClass}`} src='/images/left-courtain.png' />
-      <img className={`${s.hero__rightCurtain} ${courtainClass}`} src='/images/right-courtain.png' />
+      <img className={`${s.hero__leftCurtain} ${s[courtainClass]}`} src='/images/left-courtain.png' />
+      <img className={`${s.hero__rightCurtain} ${s[courtainClass]}`} src='/images/right-courtain.png' />
     </section>
   )
 }
