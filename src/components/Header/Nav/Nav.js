@@ -37,7 +37,15 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
     <nav className={`top-nav__header-menu ${isMobileNavOpen ? 'visible' : ''}`}>
       <div className='top-nav__main-menu-wrapper'>
         <div className='top-nav__menus' sx={{maxHeight: '90vh', paddingBottom: '10vh'}}>
-          <p className='top-nav__mobile-title'>{menuToShow.title}</p>
+          <p className='top-nav__mobile-title'>Mainstages</p>
+          <div className='menu-cross-links'>
+            <span className='menu-cross-links__title' sx={{display: ['none', null, 'block']}}><a href='tel:1-347-878-2431'><FaPhone /> 347-878-2431</a></span>
+            <div sx={mobileSectionButtonsStyles}>
+              <Link to='/virtual/' className={`${activeSisteSection === 'virtual' ? 'active' : ''}`}><span>Virtual Entertainment</span></Link>
+              <Link to='/programming/' className={`${activeSisteSection === 'programming' ? 'active' : ''}`}><span>In-person Programs</span></Link>
+              <Link to='/performances/' className={`${activeSisteSection === 'performances' ? 'active' : ''}`}><span>In-person Performances</span></Link>
+            </div>
+          </div>
           <ul className='top-nav__outer-list' id='menu-main-menu'>
             {menuToShow.items.map((item) => {
               // console.log(item)
@@ -70,14 +78,7 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
             })}
           </ul>
         </div>
-        <div className='menu-cross-links'>
-          <span className='menu-cross-links__title' sx={{display: ['none', null, 'block']}}><a href='tel:1-347-878-2431'><FaPhone /> 347-878-2431</a></span>
-          <div sx={mobileSectionButtonsStyles}>
-            <Link to='/virtual/' className={`${activeSisteSection === 'virtual' ? 'active' : ''}`}><span>Virtual Entertainment</span></Link>
-            <Link to='/programming/' className={`${activeSisteSection === 'programming' ? 'active' : ''}`}><span>In-person Programs</span></Link>
-            <Link to='/performances/' className={`${activeSisteSection === 'performances' ? 'active' : ''}`}><span>In-person Performances</span></Link>
-          </div>
-        </div>
+
       </div>
       <div className='top-nav__image-buttons-wrapper'>
         <Link to='/virtual/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Virtual Entertainment</span></Link>
