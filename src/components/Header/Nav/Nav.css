@@ -99,7 +99,7 @@
   width: 85%;
   max-width: 550px;
 
-  
+
 }
 .top-nav__mobile-title {
   color: #fff;
@@ -133,7 +133,7 @@
   text-decoration: none;
   color: #fff;
   padding: 1rem  0.5rem;
-  display: block; 
+  display: block;
   margin-left: 0.5rem;
   font-weight: 300;
 }
@@ -306,7 +306,7 @@
       padding: 0.1rem 0.8rem;
       text-align: center;
       /* background-color: rgb(94, 141, 32); */
-      
+
       z-index: 2;
     }
 .top-nav__image-buttons-wrapper a span:hover{
@@ -318,7 +318,7 @@
       /* menu cross-links begin */
       .menu-cross-links {
         /* font-family: Jubilat, serif; */
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
