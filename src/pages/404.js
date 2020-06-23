@@ -14,7 +14,7 @@ export default ({data}) => {
   return (
     <BackgroundImage
       fluid={data.headerBg.childImageSharp.fluid} className='basic-page__hero'
-      sx={{py: '1px'}} sx={{minHeight: '80vh', mt: '-80px!important', backgroundPosition: 'right center'}}
+      sx={{py: '1px'}} sx={{minHeight: '80vh', mt: '-80px!important', backgroundPosition: 'top right'}}
     >
       {/* <div className='basic-page__hero-bg-image-source'> */}
       {/*  aaaaaaaa */}
