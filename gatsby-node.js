@@ -17,28 +17,28 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   // Query Pages
   const pagesQuery = await graphql(`
     {
-      allSanityPage {
+      allSanityPage(filter: {content: { main: { slug: {current: {ne: null}}}}})  {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
           }
         }
       }
-      allSanityPageHidden {
+      allSanityPageHidden(filter: {content: { main: { slug: {current: {ne: null}}}}})  {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
           }
         }
       }
-      allSanityPagePerformance {
+      allSanityPagePerformance(filter: {content: { main: { slug: {current: {ne: null}}}}})  {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
           }
         }
       }
-      allSanityPost(sort: {fields: content___main___publishedAt, order: DESC}) {
+      allSanityPost(filter: {content: {main: {publishedAt: {ne: null}, slug: {current: {ne: null}}}}}, sort: {fields: content___main___publishedAt, order: DESC}) {
         edges {
           node {
             _rawContent(resolveReferences: {maxDepth: 9})
