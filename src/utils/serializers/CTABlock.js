@@ -3,6 +3,7 @@ import {jsx} from 'theme-ui'
 import React from 'react' // eslint-disable-line
 import {Link} from 'gatsby'
 import {FaChevronRight} from 'react-icons/fa'
+import isAbsoluteURL from 'is-absolute-url'
 
 export default ({node}) => {
   return (
@@ -26,7 +27,9 @@ export default ({node}) => {
     >
       <p>{node.text}</p>
       <div sx={{textAlign: 'left', mt: 3}}>
-        <Link to={node.url} sx={{variant: 'buttons.simpleWhite'}}>{node.buttonText} <FaChevronRight sx={{position: 'relative', top: '0.25rem'}} /></Link>
+        {isAbsoluteURL(node.url)
+          ? (<a href={node.url} sx={{variant: 'buttons.simpleWhite'}}>{node.buttonText} <FaChevronRight sx={{position: 'relative', top: '0.25rem'}} /></a>)
+          : (<Link to={node.url} sx={{variant: 'buttons.simpleWhite'}}>{node.buttonText} <FaChevronRight sx={{position: 'relative', top: '0.25rem'}} /></Link>)}
       </div>
     </div>
   )
