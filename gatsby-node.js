@@ -69,7 +69,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   // redirects
 
   // redirect home page to /virtual/
-  createRedirect({fromPath: '/', toPath: '/virtual/', isPermanent: true, force: true})
+  // createRedirect({fromPath: '/', toPath: '/virtual/', isPermanent: true, force: true})
 
   // fixed redirects
 

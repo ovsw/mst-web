@@ -1,0 +1,316 @@
+
+.hero {
+  position: relative;
+  padding-top: 1rem;
+  margin-top: 70px;
+  background-color: #87cc2f;
+}
+/* background-color: #301111; */
+.hero__bg-wrapper {
+  /* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQIW2NkYGD4z8DAwMjIAAUADikBA/ggJToAAAAASUVORK5CYII='), url('../../static/images/hero/group-outside.jpg');
+    background-position:bottom center, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 600px; */
+
+  /* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2MQ3m+6GQADqwG7/WrUNAAAAABJRU5ErkJggg=='), url('../../static/images/hero/group-outside.jpg');
+    background-position:bottom center, bottom center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 600px;  */
+}
+.hero__heading {
+  font-size: 3.157rem;
+  padding: 3.5rem 1.5rem 4rem 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 0.8;
+  margin: 0;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 530px) {
+  .hero__heading {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__heading {
+    padding-bottom: 0rem;
+  }
+}
+.hero__heading span {
+  font-weight: 300;
+  font-size: 1.777rem;
+  display: block;
+  line-height: 1.7;
+  padding-left: 0.5rem;
+  text-shadow: none;
+}
+.hero__heading span.second {
+  padding-left: 2rem;
+}
+.hero__cards {
+  padding-bottom: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .hero__cards {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__cards {
+    padding-bottom: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .hero__cards-wrapper {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(67%, rgba(135, 204, 47, 1)),
+      color-stop(68%, rgba(255, 255, 255, 1))
+    );
+    background: -webkit-linear-gradient(top, rgba(135, 204, 47, 1) 67%, rgba(255, 255, 255, 1) 68%);
+    background: -o-linear-gradient(top, rgba(135, 204, 47, 1) 67%, rgba(255, 255, 255, 1) 68%);
+    background: linear-gradient(to bottom, rgba(135, 204, 47, 1) 67%, rgba(255, 255, 255, 1) 68%);
+  }
+}
+.hero__card {
+  /* clip-path: polygon(0 20%, 1600px 0, 1600px 80%, 0 100%);   */
+  -webkit-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+  padding: 180px 0 130px 30%;
+  display: block;
+  text-decoration: none !important;
+}
+@media (min-width: 768px) {
+  .hero__card {
+    padding-left: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    padding-left: 120px;
+    /* clip-path: none; */
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    -webkit-box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .hero__card:hover {
+    -webkit-transform: translateY(-50px) skewY(-3deg);
+    -ms-transform: translateY(-50px) skewY(-3deg);
+    transform: translateY(-50px) skewY(-3deg);
+    /* box-shadow: -10px 5px 50px color($black a(30%)); */
+  }
+}
+@media (min-width: 1200px) {
+  .hero__card {
+    margin-right: 20px;
+    padding: 70px 0 70px 200px;
+  }
+}
+.hero__card.n-1 {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(255, 255, 255, 0)),
+      color-stop(5%, rgba(237, 117, 61, 0.37)),
+      color-stop(90%, rgba(237, 117, 61, 0.6))
+    ),
+    url("../../static/images/hero/performances.jpg");
+  background-image: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(237, 117, 61, 0.37) 5%,
+      rgba(237, 117, 61, 0.6) 90%
+    ),
+    url("../../static/images/hero/performances.jpg");
+  background-image: -o-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(237, 117, 61, 0.37) 5%,
+      rgba(237, 117, 61, 0.6) 90%
+    ),
+    url("../../static/images/hero/performances.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(237, 117, 61, 0.37) 5%,
+      rgba(237, 117, 61, 0.6) 90%
+    ),
+    url("../../static/images/hero/performances.jpg");
+  background-position: 30% 0%;
+}
+@media (min-width: 1024px) {
+  .hero__card.n-1 {
+    border: 5px solid #ed753d;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__card.n-1:hover {
+    -webkit-transform: translateY(-50px) skewY(-3deg);
+    -ms-transform: translateY(-50px) skewY(-3deg);
+    transform: translateY(-50px) skewY(-3deg);
+    z-index: 900;
+  }
+}
+.hero__card.n-2 {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(255, 255, 255, 0)),
+      color-stop(5%, rgba(122, 183, 74, 0.25)),
+      to(rgba(122, 183, 74, 0.6))
+    ),
+    url("../../static/images/hero/group-outside.jpg");
+
+  background-image: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(122, 183, 74, 0.25) 5%,
+      rgba(122, 183, 74, 0.6) 100%
+    ),
+    url("../../static/images/hero/group-outside.jpg");
+
+  background-image: -o-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(122, 183, 74, 0.25) 5%,
+      rgba(122, 183, 74, 0.6) 100%
+    ),
+    url("../../static/images/hero/group-outside.jpg");
+
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(122, 183, 74, 0.25) 5%,
+      rgba(122, 183, 74, 0.6) 100%
+    ),
+    url("../../static/images/hero/group-outside.jpg");
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,7ab74a+25&0+0,1+100 */
+  background-position: left center;
+}
+/* margin-top: -90px; */
+@media (min-width: 1024px) {
+  .hero__card.n-2 {
+    margin-top: 0;
+    border: 5px solid #49884a;
+  }
+}
+.hero__card.n-3 {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(255, 255, 255, 0)),
+      color-stop(5%, rgba(118, 123, 163, 0.25)),
+      to(rgba(140, 112, 171, 0.6))
+    ),
+    url("../../static/images/hero/family.jpg");
+  background: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(118, 123, 163, 0.25) 5%,
+      rgba(140, 112, 171, 0.6) 100%
+    ),
+    url("../../static/images/hero/family.jpg");
+  background: -o-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(118, 123, 163, 0.25) 5%,
+      rgba(140, 112, 171, 0.6) 100%
+    ),
+    url("../../static/images/hero/family.jpg");
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(118, 123, 163, 0.25) 5%,
+      rgba(140, 112, 171, 0.6) 100%
+    ),
+    url("../../static/images/hero/family.jpg");
+  background-size: cover;
+}
+/* margin-top: -90px; */
+@media (min-width: 1024px) {
+  .hero__card.n-3 {
+    margin-top: 0;
+    border: 5px solid #8c70ab;
+  }
+}
+.hero__card-title {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin: 0;
+}
+.hero__card-text {
+  color: #fff;
+  padding: 0.8rem 1rem 1rem 1rem;
+  line-height: 1.3;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-right: none;
+  -webkit-transform: skewY(3deg);
+  -ms-transform: skewY(3deg);
+  transform: skewY(3deg);
+}
+@media (min-width: 1024px) {
+  .hero__card-text {
+    /* transform: skewY(3deg);
+      transition: all 0.5s; */
+  }
+}
+.hero__card-text.n-1 {
+  background-color: #ed753d;
+}
+.hero__card-text.n-2 {
+  background-color: #7ab74a;
+}
+.hero__card-text.n-3 {
+  background-color: #8c70ab;
+}
+.hero__card-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+.hero__card-button {
+  background-color: #fff;
+  display: block;
+  margin: 5px 10% 0 10%;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .hero__card-button {
+    display: inline-block;
+    margin: 5px 5px;
+  }
+}
+.hero__card-button.n-1 {
+  color: #ed753d;
+}
+.hero__card-button.n-2 {
+  color: #7ab74a;
+}
+.hero__card-button.n-3 {
+  color: #8c70ab;
+}
+
