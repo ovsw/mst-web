@@ -73,7 +73,7 @@ const ProgrammingLandingContent = () => {
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Afterschool Staffing &amp; Training <FaChevronRight />
+                  School Staffing &amp; Training <FaChevronRight />
                 </Link>
 
               </div>
@@ -105,7 +105,7 @@ const ProgrammingLandingContent = () => {
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Afterschool Program Development
+                  School Program Development
                   <FaChevronRight />
                 </Link>
 
@@ -137,7 +137,7 @@ const ProgrammingLandingContent = () => {
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Afterschool Production Supplies
+                  School Production Supplies
                   <FaChevronRight />
                 </Link>
 
@@ -170,7 +170,7 @@ const ProgrammingLandingContent = () => {
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Afterschool Marketing &amp; Publicity
+                  School Marketing &amp; Publicity
                   <FaChevronRight />
                 </Link>
               </div>
@@ -203,7 +203,7 @@ const ProgrammingLandingContent = () => {
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Afterschool Supervision &amp; Support
+                  School Supervision &amp; Support
                   <FaChevronRight />
                 </Link>
               </div>
