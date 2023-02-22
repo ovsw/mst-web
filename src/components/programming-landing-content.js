@@ -69,11 +69,13 @@ const ProgrammingLandingContent = () => {
               <p>See details about Staffing &amp; Training:</p>
               <div className={s.packageSlide__buttonWrapper}>
                 <Link className='button package-slide__button' to='/programming/camp-package/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Camp Staffing &amp; Training <FaChevronRight />
+                  See camp package options
+                  <FaChevronRight />
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  School Staffing &amp; Training <FaChevronRight />
+                  See school program options
+                  <FaChevronRight />
                 </Link>
 
               </div>
@@ -100,12 +102,12 @@ const ProgrammingLandingContent = () => {
               <p>See details about Program Development:</p>
               <div className={s.packageSlide__buttonWrapper}>
                 <Link className='button package-slide__button' to='/programming/camp-package/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Camp Program Development
+                  See camp package options
                   <FaChevronRight />
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  School Program Development
+                  See school program options
                   <FaChevronRight />
                 </Link>
 
@@ -132,12 +134,12 @@ const ProgrammingLandingContent = () => {
               <div className={s.packageSlide__buttonWrapper}>
 
                 <Link className='button package-slide__button' to='/programming/camp-package/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Camp Production Supplies
+                  See camp package options
                   <FaChevronRight />
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  School Production Supplies
+                  See school program options
                   <FaChevronRight />
                 </Link>
 
@@ -165,12 +167,12 @@ const ProgrammingLandingContent = () => {
               <div className={s.packageSlide__buttonWrapper}>
 
                 <Link className='button package-slide__button' to='/programming/camp-package/' sx={{variant: 'buttons.simpleAccent'}}>
-                  Camp Marketing &amp; Publicity
+                  See camp package options
                   <FaChevronRight />
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  School Marketing &amp; Publicity
+                  See school program options
                   <FaChevronRight />
                 </Link>
               </div>
@@ -197,13 +199,13 @@ const ProgrammingLandingContent = () => {
               <p>See details about Supervision &amp; Support:</p>
               <div className={s.packageSlide__buttonWrapper}>
 
-                <Link className='button package-slide__button' to='/programming/camp-package' sx={{variant: 'buttons.simpleAccent'}}>
-                  Camp Supervision &amp; Support
+                <Link className='button package-slide__button' to='/programming/camp-package/' sx={{variant: 'buttons.simpleAccent'}}>
+                  See camp package options
                   <FaChevronRight />
                 </Link>
                 <br />
                 <Link className='button package-slide__button' to='/school-programs/' sx={{variant: 'buttons.simpleAccent'}}>
-                  School Supervision &amp; Support
+                  See school program options
                   <FaChevronRight />
                 </Link>
               </div>
