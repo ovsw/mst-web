@@ -22,6 +22,7 @@ const Footer = () => {
 
           <div className='footer__logos'>
             <a href='http://www.nystea.org/' className='footer__logo-link'><img src='/images/nystea-logo.png' alt='Mainstages Logo' /></a>
+            <a href='https://nycaieroundtable.org/' className='footer__logo-link'><img src='/images/roundtable-logo.jpg' alt='Roundtable Logo' /></a>
             <a href='http://mainstages.com/' className='footer__logo-link'><img src='/images/mainstages-logo-classic.png' alt='Mainstages Logo' /></a>
           </div>
 
