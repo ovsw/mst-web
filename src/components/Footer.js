@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <p className='footer__copyright'>Copyright ©2020 Mainstages. All Rights Reserved | Website by <a href='http://ovswebsites.com/' target='_blank' rel='noopener noreferrer'>OVS Websites</a></p>
+          <p className='footer__copyright'>Copyright ©{new Date().getFullYear()} Mainstages. All Rights Reserved | Website by <a href='http://ovswebsites.com/' target='_blank' rel='noopener noreferrer'>OVS Websites</a></p>
         </div>
       </footer>
     </div>
