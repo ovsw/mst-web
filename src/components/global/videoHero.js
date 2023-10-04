@@ -19,7 +19,7 @@ const VideoHero = ({data}) => {
   switch (video) {
     case 'performances1' :
       // videoSource = 'https://mstvideo-ac97.kxcdn.com/mainstages-intro-montage.mp4'
-      videoSource = 'https://mstvideo-ac97.kxcdn.com/quick-video-cut-sizzle-reel-jan-2023-updated.mp4'
+      videoSource = '/video/quick-video-cut-sizzle-reel-jan-2023-updated.mp4'
       posterBg = '/images/hero-bg-live.jpg'
       heroType = 'Performances'
       break
@@ -29,7 +29,7 @@ const VideoHero = ({data}) => {
       heroType = 'Live'
       break
     default :
-      videoSource = 'https://mstvideo-ac97.kxcdn.com/quick-video-cut-sizzle-reel-jan-2023-updated.mp4'
+      videoSource = '/video/quick-video-cut-sizzle-reel-jan-2023-updated.mp4'
   }
 
   return (
