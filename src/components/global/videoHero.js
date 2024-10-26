@@ -44,7 +44,7 @@ const VideoHero = ({data}) => {
       <div className={s.hero__content}>
         <Styled.h1 className={s.hero__heading} sx={{color: 'primary'}}>{title}</Styled.h1>
         <div className={s.hero__hookline}><BlockContent blocks={text} serializers={serializers} /></div>
-        {url.startsWith("http") &&
+        {url!= undefined && url.startsWith("http") &&
         <a
           className={s.hero__cta} href={url} target="_blank" sx={{
             variant: 'buttons.simple'
@@ -53,7 +53,7 @@ const VideoHero = ({data}) => {
         </a>
         }
 
-        {!url.startsWith("http") &&
+        {url!= undefined && !url.startsWith("http") &&
         <Link
           className={s.hero__cta} to={url} sx={{
             variant: 'buttons.simple'
