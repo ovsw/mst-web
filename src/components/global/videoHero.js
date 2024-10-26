@@ -44,12 +44,23 @@ const VideoHero = ({data}) => {
       <div className={s.hero__content}>
         <Styled.h1 className={s.hero__heading} sx={{color: 'primary'}}>{title}</Styled.h1>
         <div className={s.hero__hookline}><BlockContent blocks={text} serializers={serializers} /></div>
+        {url.startsWith("http") &&
+        <a
+          className={s.hero__cta} href={url} target="_blank" sx={{
+            variant: 'buttons.simple'
+          }}
+        >{buttonText}
+        </a>
+        }
+
+        {!url.startsWith("http") &&
         <Link
           className={s.hero__cta} to={url} sx={{
             variant: 'buttons.simple'
           }}
         >{buttonText}
         </Link>
+        }
       </div>
       <img className={`${s.hero__leftCurtain} ${s[courtainClass]}`} src='/images/left-courtain.png' />
       <img className={`${s.hero__rightCurtain} ${s[courtainClass]}`} src='/images/right-courtain.png' />
