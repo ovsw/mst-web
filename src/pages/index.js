@@ -24,11 +24,10 @@ export default () => {
         <div class="hero__cards">
           <a class="hero__card n-1" href="/performances/">
             <div class="hero__card-text n-1">
-              <h2 class="hero__card-title">Performances</h2>
+              <h2 class="hero__card-title">Year-Round Shows</h2>
               <div class="hero__card-description n-1">
                 <p>
-                  We tour&nbsp;nationwide with professional performers who engage and entertain
-                  children of all ages.
+                  Our school assemblies & community performances emphasize social growth and development.
                 </p>
               </div>
               <span class="button hero__card-button n-1">Learn More</span>
@@ -54,11 +53,11 @@ export default () => {
           </a>
           {/* <!-- /.hero__card --> */}
 
-          <a class="hero__card n-3" href="/virtual/">
+          <a class="hero__card n-3" href="/summer-tour/">
             <div class="hero__card-text n-3">
-              <h2 class="hero__card-title">Virtual</h2>
+              <h2 class="hero__card-title">Summer Camp Shows</h2>
               <div class="hero__card-description n-3">
-                <p>ZOOM game shows and birthday parties across the globe</p>
+                <p>We tour camps nationwide with professional performers who engage and entertain children of all ages.</p>
               </div>
               <span class="button hero__card-button n-3">Learn More</span>
               {/* <!-- <a class="button hero__card-button n-3" href="">Book us</a> --> */}
