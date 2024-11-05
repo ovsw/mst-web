@@ -30,8 +30,8 @@ const Controls = ({passingTags, allFilterClickListener}) => {
       {buildTagControls('Performance Type', 'performanceType')}
       {buildTagControls('# of Participants', 'noOfParticipants')}
       {buildTagControls('Age Range', 'ageRange')}
-      {/* {buildTagControls('Themes', 'themes')} */}
-      {/* {buildTagControls('Holidays', 'hollidays')} */}
+      {buildTagControls('Themes', 'themes')}
+      {buildTagControls('Holidays', 'hollidays')}
 
       {/* <button
         className='collection interactive'
