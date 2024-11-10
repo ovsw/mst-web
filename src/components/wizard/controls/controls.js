@@ -5,8 +5,8 @@ import React from 'react' // eslint-disable-line
 // import TagButton from './tag-button'
 
 const Controls = ({passingTags, allFilterClickListener}) => {
-  const {performanceType} = passingTags
 
+  // builds controls for a given performance attribute
   const buildTagControls = (title, tagGroup) => {
     return (
       <div className='row tagRow'>
@@ -31,7 +31,7 @@ const Controls = ({passingTags, allFilterClickListener}) => {
       {buildTagControls('# of Participants', 'noOfParticipants')}
       {buildTagControls('Age Range', 'ageRange')}
       {buildTagControls('Themes', 'themes')}
-      {buildTagControls('Holidays', 'hollidays')}
+      {buildTagControls('Holidays', 'holidays')}
 
       {/* <button
         className='collection interactive'

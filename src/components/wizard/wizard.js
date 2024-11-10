@@ -162,7 +162,7 @@ class Wizard extends React.Component {
             isActive: false
           }
         },
-        hollidays: {
+        holidays: {
           none: {
             title: 'none',
             isActive: false
@@ -225,7 +225,7 @@ class Wizard extends React.Component {
   // **************** UNIVERSAL Filter ****************
   allFilterClickListener (e, filterProp) {
     const name = e.target.dataset.name
-    // console.log('FILTER clicked', name)
+    console.log('FILTER clicked', name)
     this.setState(prevState => ({
       userInputContainerClicked: true,
       passingTags: {
@@ -242,13 +242,14 @@ class Wizard extends React.Component {
     }))
   };
 
-  filteredCollected () {
+  // get all the active flters based on what the user clicked on 
+  activeFilters () {
     const collectedTrueKeys = {
       performanceType: [],
       ageRange: [],
       noOfParticipants: [],
       themes: [],
-      hollidays: []
+      holidays: []
     }
 
     // loop through all tag groups we want to collect active tags for
@@ -262,41 +263,56 @@ class Wizard extends React.Component {
         }
       }
     })
-    // console.log('collected active filters:', collectedTrueKeys)
+    console.log('collected active filters h:', collectedTrueKeys.hollidays)
     return collectedTrueKeys
   }
 
-  multiPropsFilter (performances, filters) {
+  filterPerformancesByCriteria (allPperformances, activeFilters) {
     // grab all the criteria we are filtering by fom the active tags
-    const filterKeys = Object.keys(filters) // = [performanceType, ageRange, noOfParticipants, themes, hollidays]
-
+    const allFilterCriteria = Object.keys(activeFilters) // = [performanceType, ageRange, noOfParticipants, themes, hollidays]
+    console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx \n allFilterCriteria', allFilterCriteria)
     // we'll be returning a filtered down array of performances to list
-    return performances.filter(performance => { // for each performance...
-      return filterKeys.every( // ... we'll test if all the active filter criteria is found it that performance's attributes
-        key => { // eg = performanceType - check each filter group
-          if (!filters[key].length) return true // eg filters[performanceType] == [] - we have no active tags for this filer gorup = automatic pass
+    return allPperformances.filter(currentPerformance => { // for each performance...
+      console.log(`********************BEGIN CHECKING ${currentPerformance.title}********************`)
+      return allFilterCriteria.every( // ... we'll test if all the active filter criteria is found it that performance's attributes
+        
+        filterCriterion => { // eg = performanceType - check each filter group/
+          console.log(`\n \t\t for ${currentPerformance.title} -  ${filterCriterion} user selectged: ${activeFilters[filterCriterion].length == 0 ? "❌NOTHING" : activeFilters[filterCriterion]} 
+            \n filtervalues: ${activeFilters[filterCriterion]} |
+            \n performance values: ${currentPerformance[filterCriterion]} b
+            \n peroformance Object: ${Object.keys(currentPerformance)}
+            `)
+          // check if we have any buttons pressed for the current filter group, if not, move on to next group
+          if (!activeFilters[filterCriterion].length) return true // eg activeFilters[performanceType] == [] - we have no active tags for this filer gorup = AUTOMATIC PASS the check (which means show the performance, according to this criterion, since the user ignored it)
 
           // now that we KNOW we have some active tags in this group
-          // if performance[key] is an array - meaning multi-option attributes for performances - which it always is in this particular project...
-          if (Array.isArray(performance[key])) { // performance.performanceType = ['interactive', 'game']
+          // if currentPerformance[filterCriterion] is an array - meaning multi-option attributes for performances - which it always is in this particular project...
+          if (Array.isArray(currentPerformance[filterCriterion])) { // currentPerformance.performanceType = ['interactive', 'game']
             // Loop therough all values of the performance's attribute (which has the same name as the filter group we are checking)...
             // ... and check if at least one of the set values for that performance's attribute is the current active filter's value
-            return performance[key] // e.g. performance.performanceType
+            console.log(` \n bbb this performance ${currentPerformance.title} has the ${filterCriterion} set to:  ${currentPerformance[filterCriterion]}
+               \n and the user is looking for ${activeFilters[filterCriterion]}
+               \n therefore,
+              `), 
+              console.log("____________________________________")
+            return currentPerformance[filterCriterion] // e.g. performance.performanceType
               .some(attributeValue => // e.g. 'interactive'
-              // check if the performance attribute value (eg. 'interactive') is one that we're looking for  (is in filters.performanceType)
-                filters[key].includes(attributeValue) // filters.performanceType.includes(interactive) next: filters.performanceType.includes(game).. etc
+              // check if the performance attribute value (eg. 'interactive') is one that we're looking for  (is in activeFilters.performanceType)
+                activeFilters[filterCriterion].includes(attributeValue) // activeFilters.performanceType.includes(interactive) next: activeFilters.performanceType.includes(game).. etc
               )
           }
+          
           // if the performance's attribute is NOT an array (phat chance with performances use case)
-          return filters[key].includes(performance[key]) // will pass if the performance attribute's value is found in teh active filters
+          // console.log('OH OHHHHHHHHHHHH currently ', activeFilters[filterCriterion], ' - ', performance)
+          return activeFilters[filterCriterion].includes(performance[filterCriterion]) // will pass if the performance attribute's value is found in teh active filter
         })
     })
   }
 
-  filterPerformances () {
-    const filteredPerformances = this.multiPropsFilter(
+  getFilteredPerformances () {
+    const filteredPerformances = this.filterPerformancesByCriteria(
       this.props.performances,
-      this.filteredCollected()
+      this.activeFilters()
     )
     return filteredPerformances
   };
@@ -308,9 +324,10 @@ class Wizard extends React.Component {
     return (
       <Container>
 
+        {/* // pass the  */}
         <Controls passingTags={passingTags} allFilterClickListener={this.allFilterClickListener} />
 
-        <PerformancesContainer performances={this.filterPerformances()} totalNoOfPerformances={performances.length} userInputContainerClicked={userInputContainerClicked} />
+        <PerformancesContainer performances={this.getFilteredPerformances()} totalNoOfPerformances={performances.length} userInputContainerClicked={userInputContainerClicked} />
 
       </Container>
     )
