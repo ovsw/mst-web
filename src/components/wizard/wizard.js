@@ -16,7 +16,7 @@ class Wizard extends React.Component {
       passingTags: {
         performanceType: {
           interactive: {
-            title: 'Interactive',
+            title: 'Interactive Performances',
             isActive: false
           },
           game: {
@@ -55,6 +55,10 @@ class Wizard extends React.Component {
           },
           mixed: {
             title: 'A bit of Everything',
+            isActive: false
+          },
+          adults: {
+            title: 'Adults',
             isActive: false
           }
         },
