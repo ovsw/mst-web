@@ -168,23 +168,19 @@ class Wizard extends React.Component {
         },
         holidays: {
           none: {
-            title: 'none',
+            title: 'None',
+            isActive: false
+          },
+          'black-history-month': {
+            title: 'Black History Month',
             isActive: false
           },
           chanukah: {
             title: 'Chanukah',
             isActive: false
           },
-          christmaschristmas: {
+          christmas: {
             title: 'Christmas',
-            isActive: false
-          },
-          'earth-day': {
-            title: 'Earth Day',
-            isActive: false
-          },
-          'election-day': {
-            title: 'Election Day',
             isActive: false
           },
           halloween: {
@@ -193,10 +189,6 @@ class Wizard extends React.Component {
           },
           'high-holidays': {
             title: 'High Holidays',
-            isActive: false
-          },
-          'independence-day': {
-            title: 'Independence Day',
             isActive: false
           },
           passover: {
@@ -209,14 +201,6 @@ class Wizard extends React.Component {
           },
           purim: {
             title: 'Purim',
-            isActive: false
-          },
-          shabbat: {
-            title: 'Shabbat',
-            isActive: false
-          },
-          'tu-bishvat': {
-            title: 'Tu BiShvat',
             isActive: false
           }
         }
