@@ -24,7 +24,7 @@ class Wizard extends React.Component {
             isActive: false
           },
           mystery: {
-            title: 'Mystery',
+            title: 'Mystery Shows',
             isActive: false
           },
           custom: {
@@ -81,8 +81,16 @@ class Wizard extends React.Component {
           }
         },
         themes: {
+          'anti-bullying': {
+            title: 'Anti-Bullying',
+            isActive: false
+          },
           'arts-culture': {
             title: 'Arts & Culture',
+            isActive: false
+          },
+          'black-history-month': {
+            title: 'Black History Month',
             isActive: false
           },
           charity: {
@@ -97,48 +105,52 @@ class Wizard extends React.Component {
             title: 'Diversity',
             isActive: false
           },
+          'dual-language': {
+            title: 'Dual Language',
+            isActive: false
+          },
           environmental: {
             title: 'Environmental Awareness',
             isActive: false
           },
-          'full-day': {
-            title: 'Full Day Experiences',
+          gratitude: {
+            title: 'Gratitude',
             isActive: false
           },
-          'fun-for-adults': {
-            title: 'Fun for Adults Too',
-            isActive: false
-          },
-          history: {
-            title: 'History',
+          'hispanic-heritage': {
+            title: 'Hispanic Heritage',
             isActive: false
           },
           independence: {
             title: 'Independence',
             isActive: false
           },
-          israel: {
-            title: 'Israel',
-            isActive: false
-          },
           literacy: {
             title: 'Literacy',
+            isActive: false
+          },
+          'magical-elements': {
+            title: 'Magical Elements',
             isActive: false
           },
           mystery: {
             title: 'Mystery',
             isActive: false
           },
-          nature: {
-            title: 'Nature',
+          puppets: {
+            title: 'Puppets',
             isActive: false
           },
-          'pj-library': {
-            title: 'PJ Library',
+          resilience: {
+            title: 'Resilience',
             isActive: false
           },
           respect: {
-            title: 'Respect',
+            title: 'Respect for All',
+            isActive: false
+          },
+          'staff-appreciation': {
+            title: 'Staff Appreciation',
             isActive: false
           },
           stem: {
@@ -147,14 +159,6 @@ class Wizard extends React.Component {
           },
           camp: {
             title: 'Summer Camp',
-            isActive: false
-          },
-          superhero: {
-            title: 'Superhero',
-            isActive: false
-          },
-          technology: {
-            title: 'Technology',
             isActive: false
           },
           women: {
