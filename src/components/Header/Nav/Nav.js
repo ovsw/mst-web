@@ -81,9 +81,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
 
       </div>
       <div className='top-nav__image-buttons-wrapper'>
-        <Link to='/virtual/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Virtual Entertainment</span></Link>
-        <Link to='/programming/' className={`image-button ${activeSisteSection !== 'programming' ? 'sectionSwitch_btn--programming' : ''}`}><span>In-person Programs</span></Link>
-        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--performances' : ''}`}><span>In-person Performances</span></Link>
+        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Year-Round Shows</span></Link>
+        <Link to='/programming/' className={`image-button ${activeSisteSection !== 'programming' ? 'sectionSwitch_btn--programming' : ''}`}><span>Theater Programs</span></Link>
+        <Link to='/summer-tour/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--performances' : ''}`}><span>Summer Camp Shows</span></Link>
         {/* <a href='/programming/camp-package/' className='image-button'><span>Our Camp Package</span></a> */}
         {/* <a href='/virtual/recommended-camps/' className='image-button'><span>Camp Partnerships</span></a> */}
       </div>
