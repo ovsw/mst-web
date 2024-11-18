@@ -17,9 +17,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
   let menuToShow = null
 
   switch (activeSisteSection) {
-    case 'virtual':
+    case 'performances':
       menuToShow = menuStructure.filter(menu =>
-        menu.id === '520e71b4-3698-5363-8839-8f77332aa571'
+        menu.id === '5f27afbc-dcbd-5cfb-8c05-f55182adcfa1'
       )[0]
       break
     case 'programming':
@@ -27,9 +27,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
         menu.id === '37f6f332-c2e8-5c5c-affc-74bf0f5aa765'
       )[0]
       break
-    case 'performances':
+    case 'summer-tour':
       menuToShow = menuStructure.filter(menu =>
-        menu.id === '5f27afbc-dcbd-5cfb-8c05-f55182adcfa1'
+        menu.id === '520e71b4-3698-5363-8839-8f77332aa571'
       )[0]
       break
   }
@@ -41,9 +41,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
           <div className='menu-cross-links'>
             <span className='menu-cross-links__title' sx={{display: ['none', null, 'block']}}><a href='tel:1-347-878-2431'><FaPhone /> 347-878-2431</a></span>
             <div sx={mobileSectionButtonsStyles}>
-              <Link to='/virtual/' className={`${activeSisteSection === 'virtual' ? 'active' : ''}`}><span>Virtual Entertainment</span></Link>
               <Link to='/programming/' className={`${activeSisteSection === 'programming' ? 'active' : ''}`}><span>In-person Programs</span></Link>
               <Link to='/performances/' className={`${activeSisteSection === 'performances' ? 'active' : ''}`}><span>In-person Performances</span></Link>
+              <Link to='/summer-tour/' className={`${activeSisteSection === 'summer-tour' ? 'active' : ''}`}><span>Summer Camp Shows</span></Link>
             </div>
           </div>
           <ul className='top-nav__outer-list' id='menu-main-menu'>
@@ -81,9 +81,9 @@ const Nav = ({isMobileNavOpen, closeMobileNav}) => {
 
       </div>
       <div className='top-nav__image-buttons-wrapper'>
-        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'virtual' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Year-Round Shows</span></Link>
+        <Link to='/performances/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--virtual' : ''}`}><span>Year-Round Shows</span></Link>
         <Link to='/programming/' className={`image-button ${activeSisteSection !== 'programming' ? 'sectionSwitch_btn--programming' : ''}`}><span>Theater Programs</span></Link>
-        <Link to='/summer-tour/' className={`image-button ${activeSisteSection !== 'performances' ? 'sectionSwitch_btn--performances' : ''}`}><span>Summer Camp Shows</span></Link>
+        <Link to='/summer-tour/' className={`image-button ${activeSisteSection !== 'summer-tour' ? 'sectionSwitch_btn--performances' : ''}`}><span>Summer Camp Shows</span></Link>
         {/* <a href='/programming/camp-package/' className='image-button'><span>Our Camp Package</span></a> */}
         {/* <a href='/virtual/recommended-camps/' className='image-button'><span>Camp Partnerships</span></a> */}
       </div>
