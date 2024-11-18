@@ -316,7 +316,9 @@
       /* topnav end */
 
       /* menu cross-links begin */
-      .menu-cross-links {
+      .menu-cross-links a {
+        display: flex!important;
+        align-items: center;
         /* font-family: Jubilat, serif; */
         /*position: fixed;*/
         /*bottom: 0;*/
