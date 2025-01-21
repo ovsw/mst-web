@@ -42,6 +42,7 @@
     "react-jotform-embed": "^1.0.4",
     "react-slick": "^0.25.2",
     "react-youtube": "^7.11.2",
+    "sharp": "^0.25.4",
     "slick-carousel": "^1.8.1",
     "theme-ui": "^0.3.1"
   },
