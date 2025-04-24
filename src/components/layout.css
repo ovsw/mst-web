@@ -1,3 +1,7 @@
+strong {
+  font-weight: bold!important; /* absolute 700, not relative */
+}
+
 .button {
   padding: .5rem .9rem;
   background-color: blue;
