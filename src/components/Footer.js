@@ -30,10 +30,13 @@ const Footer = () => {
 
             <div className='footer__column footer__column--1'>
               <div className='adr'>
-                <div className='street-address'>18-32 21st Drive, 2 FT</div>
+                <div className='street-address'>2011 Lemoine Ave.</div>
                 <div>
-                  <span className='locality'>Astoria</span>, <span className='region' title='New York'>NY</span>
-                  <span className='postal-code'> 11105</span>
+                  <span>Ste. 302</span>
+                </div>
+                <div>
+                  <span className='locality'>Fort Lee</span>, <span className='region' title='New Jersey'>New Jersey</span>
+                  <span className='postal-code'> 07024</span>
                 </div>
                 <div className='country-name'>USA</div>
               </div>
