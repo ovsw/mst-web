@@ -102,7 +102,8 @@
 @media (min-width: 768px) {
 .footer__column--1 {
       float:left;
-      text-align: right
+      text-align: right;
+      border-right: 1px solid rgba(255, 255, 255, 0.7)
   }
  }
 .footer__column--2 {
@@ -112,8 +113,7 @@
 .footer__column--2 {
       float: right;
       margin-top: 0;
-      text-align-last: left;
-      border-left: 1px solid rgba(255, 255, 255, 0.7)   
+      text-align-last: left
   }
  }
 .footer__copyright {
