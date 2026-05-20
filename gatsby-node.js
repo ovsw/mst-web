@@ -6,6 +6,35 @@
 
 // const fs = require('fs')
 
+const normalizeRedirectPath = value => {
+  if (typeof value !== 'string') return null
+
+  const path = value.trim()
+  if (!path) return null
+
+  if (/^https?:\/\//i.test(path)) {
+    try {
+      const url = new URL(path)
+      return `${url.pathname}${url.search}${url.hash}` || '/'
+    } catch (error) {
+      return null
+    }
+  }
+
+  return path.startsWith('/') ? path : `/${path}`
+}
+
+const normalizeRedirectTarget = value => {
+  if (typeof value !== 'string') return null
+
+  const target = value.trim()
+  if (!target) return null
+
+  return /^https?:\/\//i.test(target) || target.startsWith('/')
+    ? target
+    : `/${target}`
+}
+
 exports.createPages = async ({graphql, actions, reporter}) => {
   const {createRedirect, createPage} = actions
 
@@ -158,8 +187,16 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   // process redirects from Sanity
   const redirectsList = pagesQuery.data.sanityRedirects.list || []
   redirectsList.forEach(({fromPath, toPath, isPermanent}) => {
-    reporter.info(`Creating redirect: ${fromPath} -> ${toPath} - ${isPermanent ? '301' : '302'}`)
-    createRedirect({fromPath, toPath, isPermanent})
+    const normalizedFromPath = normalizeRedirectPath(fromPath)
+    const normalizedToPath = normalizeRedirectTarget(toPath)
+
+    if (!normalizedFromPath || !normalizedToPath) {
+      reporter.warn(`Skipping invalid redirect: ${fromPath} -> ${toPath}`)
+      return
+    }
+
+    reporter.info(`Creating redirect: ${normalizedFromPath} -> ${normalizedToPath} - ${isPermanent ? '301' : '302'}`)
+    createRedirect({fromPath: normalizedFromPath, toPath: normalizedToPath, isPermanent})
   })
 
   // pages
