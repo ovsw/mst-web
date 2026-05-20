@@ -63,5 +63,8 @@
     "prettier-eslint-cli": "^5.0.0",
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.21"
+  },
+  "overrides": {
+    "axios": "0.31.1"
   }
 }
